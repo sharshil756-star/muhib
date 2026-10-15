@@ -116,7 +116,7 @@ export const FutureSimulatorPage: React.FC = () => {
       urlPath: '/future-ai-simulator',
       seoTitle: '2035 AI Impact Simulator: Forecasting App | Aethelgard',
       metaDescription:
-        'Simulate the future use of AI from 2026 to 2035 across healthcare, climate grids, robotics, and quantum materials with our interactive forecasting application.',
+        'Simulate the future use of AI across healthcare, climate grids, and robotics from 2026 to 2035 with our interactive multi-variable forecasting application.',
       mainKeyword: '2035 AI impact simulator',
       relatedKeywords: ['future use of AI forecasting app', 'autonomous systems ROI model'],
       monthlySearchVolume: 11200,
