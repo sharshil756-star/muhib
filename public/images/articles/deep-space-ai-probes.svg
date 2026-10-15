@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#0B0F19"/>
+  <circle cx="400" cy="300" r="220" fill="none" stroke="#1E293B" stroke-width="1.5"/>
+  <ellipse cx="400" cy="300" rx="280" ry="110" fill="none" stroke="#38BDF8" stroke-width="1.5" transform="rotate(-18 400 300)"/>
+  <ellipse cx="400" cy="300" rx="280" ry="110" fill="none" stroke="#F97316" stroke-width="1.5" stroke-dasharray="8 6" transform="rotate(24 400 300)"/>
+  <circle cx="400" cy="300" r="46" fill="#1E3A8A" stroke="#60A5FA" stroke-width="2"/>
+  <circle cx="645" cy="220" r="12" fill="#F97316"/>
+  <circle cx="170" cy="375" r="9" fill="#38BDF8"/>
+  <circle cx="520" cy="140" r="4" fill="#F8FAFC"/>
+  <circle cx="210" cy="180" r="3" fill="#F8FAFC"/>
+  <circle cx="630" cy="410" r="3" fill="#F8FAFC"/>
+  <text x="45" y="555" fill="#93C5FD" font-family="monospace" font-size="13" letter-spacing="2">FIG 07 · DEEP SPACE AUTONOMOUS NAVIGATION TELEMETRY · 12.8 KB</text>
+</svg>

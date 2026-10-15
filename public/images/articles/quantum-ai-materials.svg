@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#14181D"/>
+  <g stroke="#29323D" stroke-width="1">
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="300" x2="800" y2="300"/>
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+  </g>
+  <circle cx="400" cy="300" r="190" fill="none" stroke="#D97706" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <circle cx="400" cy="300" r="135" fill="none" stroke="#9A3412" stroke-width="2"/>
+  <circle cx="400" cy="300" r="75" fill="#1E293B" stroke="#F59E0B" stroke-width="2"/>
+  <g stroke="#F59E0B" stroke-width="1.5" fill="none">
+    <path d="M 160 300 Q 280 140 400 300 T 640 300"/>
+    <path d="M 160 300 Q 280 460 400 300 T 640 300"/>
+    <line x1="400" y1="70" x2="400" y2="530"/>
+  </g>
+  <circle cx="400" cy="300" r="14" fill="#F59E0B"/>
+  <circle cx="265" cy="300" r="8" fill="#D97706"/>
+  <circle cx="535" cy="300" r="8" fill="#D97706"/>
+  <circle cx="400" cy="165" r="8" fill="#38BDF8"/>
+  <circle cx="400" cy="435" r="8" fill="#38BDF8"/>
+  <text x="40" y="555" fill="#94A3B8" font-family="monospace" font-size="13" letter-spacing="2">FIG 05 · QUANTUM-AI HYBRID LATTICE TOPOLOGY · 18.4 KB</text>
+</svg>

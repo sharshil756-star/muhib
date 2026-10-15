@@ -1,0 +1,6 @@
+{
+  "name": "Aethelgard: Future Use of AI Journal & Foresight Atlas",
+  "description": "Explore 10 in-depth research articles, interactive 2035 impact simulations, and AEO-optimized insights on the future use of AI across medicine, climate, robotics, and education.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

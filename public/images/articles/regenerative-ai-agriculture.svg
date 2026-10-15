@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#18221B"/>
+  <rect x="60" y="60" width="680" height="480" fill="none" stroke="#2D4233" stroke-width="1.5"/>
+  <g stroke="#3E5C47" stroke-width="1" fill="none">
+    <path d="M 60 420 C 220 380, 320 450, 480 390 C 600 350, 680 390, 740 370"/>
+    <path d="M 60 460 C 220 420, 340 490, 500 430 C 620 390, 690 430, 740 410"/>
+    <path d="M 60 500 C 240 460, 360 520, 520 470 C 640 430, 700 470, 740 450"/>
+  </g>
+  <g fill="#4ADE80" fill-opacity="0.18" stroke="#4ADE80" stroke-width="1.5">
+    <circle cx="240" cy="250" r="65"/>
+    <circle cx="400" cy="210" r="85"/>
+    <circle cx="560" cy="260" r="60"/>
+  </g>
+  <g stroke="#86EFAC" stroke-width="2">
+    <line x1="240" y1="250" x2="240" y2="415"/>
+    <line x1="400" y1="210" x2="400" y2="410"/>
+    <line x1="560" y1="260" x2="560" y2="385"/>
+  </g>
+  <circle cx="240" cy="250" r="6" fill="#FACC15"/>
+  <circle cx="400" cy="210" r="6" fill="#FACC15"/>
+  <circle cx="560" cy="260" r="6" fill="#FACC15"/>
+  <text x="80" y="525" fill="#A7F3D0" font-family="monospace" font-size="13" letter-spacing="2">FIG 06 · AUTONOMOUS AGRO-ECOLOGY SOIL SENSOR MESH · 14.2 KB</text>
+</svg>
