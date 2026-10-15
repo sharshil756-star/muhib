@@ -52,14 +52,16 @@ export const HomePage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
           <div className="lg:col-span-6 flex flex-col justify-between">
             <div className="space-y-5">
-              <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-stone-500">
-                <span>VOL. XIV MONOGRAPH SERIES</span>
+              <div className="flex flex-wrap items-center gap-2 text-xs font-mono-tabular tracking-wider text-stone-600">
+                <span className="font-semibold text-[#9A3412]">Vol. XIV Monograph Series</span>
                 <span aria-hidden="true">·</span>
-                <span>2026–2035 HORIZON ATLAS</span>
+                <span>2026–2035 Horizon Atlas</span>
+                <span aria-hidden="true">·</span>
+                <span>Aethelgard AI Foresight Journal</span>
               </div>
 
-              <h1 className="font-editorial text-4xl sm:text-5xl lg:text-[54px] font-semibold text-stone-900 leading-[1.08] tracking-tight text-balance">
-                What Is the Future Use of AI Across Science, Climate, and Human Craft?
+              <h1 className="font-editorial text-4xl sm:text-5xl lg:text-[52px] font-semibold text-stone-900 leading-[1.1] tracking-tight text-balance">
+                Future Use of AI: 2026–2035 Applications Across Science, Climate, and Human Craft
               </h1>
 
               <p className="text-base sm:text-lg text-stone-700 leading-relaxed max-w-2xl">
@@ -134,7 +136,7 @@ export const HomePage: React.FC = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div>
             <p className="text-xs uppercase tracking-widest text-[#9A3412] font-semibold">
-              CURATED PILLAR MONOGRAPHS · CORE 3 ARTICLES
+              Curated Pillar Monographs · Core 3 Research Studies
             </p>
             <h2 className="font-editorial text-3xl sm:text-4xl font-semibold text-stone-900 mt-1 text-balance">
               Which Three AI Frontiers Will Reshape Civilization First?
@@ -217,11 +219,11 @@ export const HomePage: React.FC = () => {
       <section id="all-articles" className="max-w-[1320px] mx-auto px-6 py-14 border-b border-stone-200">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
           <div>
-            <p className="text-xs uppercase tracking-widest text-stone-500">
-              COMPLETE EDITORIAL ARCHIVE · 10 BLOG ARTICLES
+            <p className="text-xs uppercase tracking-widest text-stone-500 font-semibold">
+              Complete Editorial Archive · 10 Research Monographs
             </p>
             <h2 className="font-editorial text-3xl sm:text-4xl font-semibold text-stone-900 mt-1">
-              How Will Next Generation AI Technology Transform Ten Essential Domains?
+              How Will Next-Generation AI Technology Transform Ten Essential Domains?
             </h2>
           </div>
 
@@ -349,7 +351,7 @@ export const HomePage: React.FC = () => {
           <div className="lg:col-span-7 space-y-8">
             <div>
               <p className="text-xs uppercase tracking-widest text-[#9A3412] font-semibold">
-                ANSWER ENGINE OPTIMIZATION (AEO) · HOMEPAGE Q&amp;A
+                Answer Engine Optimization (AEO) · Homepage Q&amp;A
               </p>
               <h2 className="font-editorial text-3xl sm:text-4xl font-semibold text-stone-900 mt-1">
                 Frequently Asked Questions on the Future Use of AI
@@ -359,9 +361,9 @@ export const HomePage: React.FC = () => {
             <div className="space-y-8 divide-y divide-stone-200">
               {HOMEPAGE_AEO_FAQS.map((faq, idx) => (
                 <div key={idx} className={idx > 0 ? 'pt-8' : ''}>
-                  <h2 className="font-editorial text-2xl font-semibold text-stone-900">
+                  <h3 className="font-editorial text-2xl font-semibold text-stone-900">
                     {faq.question}
-                  </h2>
+                  </h3>
                   <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-3">
                     {faq.answer}
                   </p>
@@ -384,12 +386,12 @@ export const HomePage: React.FC = () => {
           <div className="lg:col-span-5 border border-stone-300 bg-[#F3EFE6] p-8 space-y-5">
             <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#9A3412] font-semibold">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>INTERACTIVE FORESIGHT APPLICATION</span>
+              <span>Interactive Foresight Application</span>
             </div>
 
-            <h2 className="font-editorial text-3xl font-semibold text-stone-900 leading-tight">
+            <h3 className="font-editorial text-3xl font-semibold text-stone-900 leading-tight">
               How Can You Model 2026–2035 AI Adoption Across Industries?
-            </h2>
+            </h3>
 
             <p className="text-sm text-stone-700 leading-relaxed">
               Use our interactive <strong>2035 AI Impact Simulator &amp; Custom Monograph Synthesis App</strong>{' '}

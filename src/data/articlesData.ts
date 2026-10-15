@@ -18,7 +18,7 @@ export const HERO_EDITORIAL_IMAGE = {
 export const HOMEPAGE_SEO_CONFIG: PageSeoConfig = {
   pageName: 'Homepage (Future AI Journal & Atlas)',
   urlPath: '/',
-  seoTitle: 'Future Use of AI: 2026–2035 Applications & Impact | Aethelgard',
+  seoTitle: 'Future Use of AI: 2026–2035 Applications | Aethelgard',
   metaDescription:
     'Explore the future use of AI across healthcare, climate grids, robotics, and education with 10 in-depth AEO research articles and interactive 2035 forecasts.',
   mainKeyword: 'future use of AI',
@@ -64,7 +64,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-in-healthcare-diagnostics',
     isCoreThree: true,
     category: 'Biomedicine',
-    seoTitle: 'Future of AI in Healthcare: Precision Diagnostics & Genomics',
+    seoTitle: 'Future of AI in Healthcare: Diagnostics | Aethelgard',
     metaDescription:
       'Discover how the future of AI in healthcare transforms clinical diagnostics, predictive genomics, and personalized drug discovery with 99.4% accuracy by 2032.',
     mainKeyword: 'future of AI in healthcare',
@@ -169,7 +169,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-climate-energy-grids',
     isCoreThree: true,
     category: 'Planetary Systems',
-    seoTitle: 'AI for Climate Change: Future Smart Grids & Carbon Capture',
+    seoTitle: 'AI for Climate Change: Smart Energy Grids | Aethelgard',
     metaDescription:
       'Learn how AI for climate change powers autonomous renewable energy grids, atmospheric carbon capture, and hyper-local extreme weather forecasting through 2035.',
     mainKeyword: 'AI for climate change',
@@ -274,7 +274,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-climate-energy-grids'.replace('climate-energy-grids', 'collaborative-robotics'),
     isCoreThree: true,
     category: 'Embodied Robotics',
-    seoTitle: 'Future of AI Robotics: Collaborative Cobots & Manufacturing',
+    seoTitle: 'Future of AI Robotics: Collaborative Cobots | Aethelgard',
     metaDescription:
       'Explore the future of AI robotics, where tactile vision-language-action cobots partner with human artisans in sustainable manufacturing and timber construction.',
     mainKeyword: 'future of AI robotics',
@@ -379,7 +379,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-personalized-education',
     isCoreThree: false,
     category: 'Cognitive & Society',
-    seoTitle: 'Future of AI in Education: Adaptive Tutoring & Creativity',
+    seoTitle: 'Future of AI in Education: Adaptive Tutoring | Aethelgard',
     metaDescription:
       'See how the future of AI in education blends Socratic AI tutors, spatial computing classrooms, and acoustic creative studios to boost student mastery by 2.4x.',
     mainKeyword: 'future of AI in education',
@@ -466,7 +466,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-quantum-material-discovery',
     isCoreThree: false,
     category: 'Deep Science',
-    seoTitle: 'Quantum AI Computing: Future Material & Battery Discovery',
+    seoTitle: 'Quantum AI Computing: Materials Discovery | Aethelgard',
     metaDescription:
       'Explore how quantum AI computing accelerates room-temperature superconductor research, solid-state battery electrolytes, and carbon-negative metamaterials.',
     mainKeyword: 'quantum AI computing',
@@ -553,7 +553,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-regenerative-agriculture',
     isCoreThree: false,
     category: 'Planetary Systems',
-    seoTitle: 'AI in Agriculture: Future Regenerative Farming & Soil Health',
+    seoTitle: 'AI in Agriculture: Regenerative Farming | Aethelgard',
     metaDescription:
       'Discover how AI in agriculture powers autonomous laser weeding, microbiome soil analytics, and drought-resilient crop breeding while cutting chemical runoff by 92%.',
     mainKeyword: 'AI in agriculture',
@@ -640,7 +640,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-deep-space-exploration',
     isCoreThree: false,
     category: 'Deep Science',
-    seoTitle: 'AI in Space Exploration: Autonomous Probes & Lunar Habitats',
+    seoTitle: 'AI in Space Exploration: Autonomous Probes | Aethelgard',
     metaDescription:
       'Explore how AI in space exploration empowers self-navigating outer-planet submarines, exoplanet biosignature detection, and autonomous lunar construction.',
     mainKeyword: 'AI in space exploration',
@@ -727,7 +727,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-ethics-algorithmic-governance',
     isCoreThree: false,
     category: 'Cognitive & Society',
-    seoTitle: 'Future of AI Ethics: Algorithmic Governance & Audit Trails',
+    seoTitle: 'Future of AI Ethics: Algorithmic Audits | Aethelgard',
     metaDescription:
       'Examine the future of AI ethics, cryptographic model provenance, neuro-symbolic safety verification, and transparent algorithmic governance frameworks for 2030.',
     mainKeyword: 'future of AI ethics',
@@ -814,7 +814,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-smart-cities-digital-twins',
     isCoreThree: false,
     category: 'Planetary Systems',
-    seoTitle: 'AI in Smart Cities: Urban Digital Twins & Autonomous Transit',
+    seoTitle: 'AI in Smart Cities: Urban Digital Twins | Aethelgard',
     metaDescription:
       'Discover how AI in smart cities uses real-time urban digital twins to cut traffic congestion by 48%, prevent water main leaks, and design walkable neighborhoods.',
     mainKeyword: 'AI in smart cities',
@@ -901,7 +901,7 @@ export const ARTICLES_DATA: ArticleData[] = [
     urlPath: '/articles/future-of-ai-brain-computer-interfaces',
     isCoreThree: false,
     category: 'Biomedicine',
-    seoTitle: 'Future of AI Brain-Computer Interfaces: Neural Decoding',
+    seoTitle: 'AI Brain-Computer Interfaces: Neural Tech | Aethelgard',
     metaDescription:
       'Discover how the future of AI brain-computer interfaces restores speech, motor control, and sensory feedback using non-invasive optical and ultrasonic neural decoding.',
     mainKeyword: 'AI brain-computer interfaces',

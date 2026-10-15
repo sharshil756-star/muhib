@@ -114,7 +114,7 @@ export const FutureSimulatorPage: React.FC = () => {
     updateDocumentSeoMeta({
       pageName: '2035 Future Use of AI Impact Simulator App',
       urlPath: '/future-ai-simulator',
-      seoTitle: '2035 AI Impact Simulator: Future Use of AI Forecasting App',
+      seoTitle: '2035 AI Impact Simulator: Forecasting App | Aethelgard',
       metaDescription:
         'Simulate the future use of AI from 2026 to 2035 across healthcare, climate grids, robotics, and quantum materials with our interactive forecasting application.',
       mainKeyword: '2035 AI impact simulator',
@@ -175,10 +175,10 @@ export const FutureSimulatorPage: React.FC = () => {
         <header className="border-b border-stone-300 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div className="space-y-3 max-w-3xl">
             <p className="text-xs uppercase tracking-widest text-[#9A3412] font-semibold">
-              INTERACTIVE FORESIGHT APPLICATION · 2026–2035 SCENARIO ENGINE
+              Interactive Foresight Application · 2026–2035 Scenario Engine
             </p>
             <h1 className="font-editorial text-4xl sm:text-5xl font-semibold text-stone-900 leading-tight text-balance">
-              How Will Photonic Compute and Governance Shape the Future Use of AI Through 2035?
+              2035 AI Impact Simulator: Forecasting the Future Use of AI Across Ten Domains
             </h1>
             <p className="text-base text-stone-700 leading-relaxed">
               Configure target horizon year, neuromorphic hardware efficiency, and algorithmic audit

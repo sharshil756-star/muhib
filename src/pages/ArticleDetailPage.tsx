@@ -75,14 +75,14 @@ export const ArticleDetailPage: React.FC = () => {
       {/* Article Header (H1, Subtitle Deck, Author & Publication Metadata) */}
       <header className="max-w-[1320px] mx-auto px-6 pt-10 pb-10 border-b border-stone-200">
         <div className="max-w-4xl space-y-5">
-          <div className="flex flex-wrap items-center gap-2 text-xs uppercase tracking-widest text-stone-500 font-mono-tabular">
-            <span>MONOGRAPH {article.numberIndex} OF 10</span>
+          <div className="flex flex-wrap items-center gap-2 text-xs text-stone-600 font-mono-tabular">
+            <span className="font-semibold text-[#9A3412]">Monograph {article.numberIndex} of 10</span>
             <span aria-hidden="true">·</span>
             <span>{article.category}</span>
             <span aria-hidden="true">·</span>
-            <span>PUBLISHED {article.publishedDate.toUpperCase()}</span>
+            <span>Published {article.publishedDate}</span>
             <span aria-hidden="true">·</span>
-            <span>{article.readingTimeMinutes} MIN READ ({article.wordCount} WORDS)</span>
+            <span>{article.readingTimeMinutes} min read ({article.wordCount} words)</span>
           </div>
 
           <h1 className="font-editorial text-4xl sm:text-5xl lg:text-[52px] font-semibold text-stone-900 leading-[1.1] text-balance">
