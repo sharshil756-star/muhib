@@ -1,13 +1,18 @@
 import { ArticleData, PageSeoConfig } from '../types/seoArticle';
+import heroImg from '../assets/images/future_ai_editorial_hero_1792035906902.jpg';
+import healthcareImg from '../assets/images/ai_precision_medicine_lab_1792035908849.jpg';
+import climateImg from '../assets/images/ai_climate_grid_architecture_1792035910282.jpg';
+import roboticsImg from '../assets/images/ai_collaborative_robotics_atelier_1792035912658.jpg';
+import educationImg from '../assets/images/ai_neural_education_symphony_1792035912961.jpg';
 
 export const HERO_EDITORIAL_IMAGE = {
-  src: '/images/future-ai-neural-hero.svg',
+  src: heroImg,
   altText:
-    'Luminous quantum artificial intelligence neural core projecting a holographic world model in a 2035 research pavilion',
+    'Luminous bio-computational research conservatory in 2035 with holographic world models and optical computing columns',
   caption:
-    'Fig. 00 — The Aethelgard Autonomous AI Core in 2035, projecting real-time planetary neural models, quantum synapses, and multi-domain simulations.',
-  fileSizeKb: 18.5,
-  dimensions: '1280 × 720 px (16:9)',
+    'Fig. 00 — The Aethelgard Autonomous AI Core in 2035: Sunlit bio-computational research conservatory projecting planetary neural models and multi-domain simulations.',
+  fileSizeKb: 1180,
+  dimensions: '1920 × 1080 px (16:9)',
 };
 
 export const HOMEPAGE_SEO_CONFIG: PageSeoConfig = {
@@ -82,13 +87,13 @@ export const ARTICLES_DATA: ArticleData[] = [
     readingTimeMinutes: 9,
     wordCount: 1480,
     image: {
-      src: '/images/articles/ai-healthcare-diagnostics.svg',
+      src: healthcareImg,
       altText:
-        'Holographic human digital twin and genomic sequencer showing the future of AI in clinical healthcare and diagnostics',
+        'Next-generation clinical genomics and AI diagnostics laboratory with cellular protein folding holographic projection',
       caption:
-        'Fig. 01 — Predictive AI genomic diagnostic pod rendering real-time cellular digital twins, neural brain scans, and pre-symptomatic biomarker maps.',
-      fileSizeKb: 18.2,
-      dimensions: '800 × 600 px (4:3)',
+        'Fig. 01 — Next-generation clinical genomics and AI diagnostics studio: Brushed aluminum optical microscope with holographic cellular protein folding projection and pre-symptomatic biomarker maps.',
+      fileSizeKb: 802,
+      dimensions: '1600 × 1200 px (4:3)',
     },
     pullQuote: {
       text: 'By 2032, a routine blood draw will no longer be compared against a population average; it will be simulated against a patient’s lifelong molecular digital twin.',
@@ -187,13 +192,13 @@ export const ARTICLES_DATA: ArticleData[] = [
     readingTimeMinutes: 8,
     wordCount: 1420,
     image: {
-      src: '/images/articles/ai-climate-energy-grids.svg',
+      src: climateImg,
       altText:
-        'Autonomous renewable energy supergrid and carbon capture towers connected by AI neural network vectors',
+        'Cinematic architectural photograph of an autonomous renewable energy grid and atmospheric carbon capture facility',
       caption:
-        'Fig. 02 — Autonomous neural grid controller balancing wind, solar, and coastal direct-air carbon mineralization at sub-second latency.',
-      fileSizeKb: 17.5,
-      dimensions: '800 × 600 px (4:3)',
+        'Fig. 02 — Autonomous renewable energy and atmospheric carbon capture facility in a Nordic fjord: Minimalist concrete and solar glass turbines balancing grid storage at sub-second latency.',
+      fileSizeKb: 857,
+      dimensions: '1600 × 1200 px (4:3)',
     },
     pullQuote: {
       text: 'Renewable energy was never limited by solar or wind abundance; it was bottlenecked by our inability to predict atmospheric turbulence and dispatch storage at sub-second latency.',
@@ -292,13 +297,13 @@ export const ARTICLES_DATA: ArticleData[] = [
     readingTimeMinutes: 8,
     wordCount: 1390,
     image: {
-      src: '/images/articles/ai-collaborative-robotics.svg',
+      src: roboticsImg,
       altText:
-        'Next-generation humanoid AI cobot assembling precision micro-components alongside a human engineer',
+        'Editorial documentary photograph of a precision humanoid robotics and artisan fabrication studio with titanium cobot',
       caption:
-        'Fig. 03 — Embodied physical AI cobot collaborating with human artisans with sub-millimeter tactile force feedback.',
-      fileSizeKb: 19.1,
-      dimensions: '800 × 600 px (4:3)',
+        'Fig. 03 — Precision humanoid robotics atelier: Sleek brushed titanium robotic arm collaborating with human artisans on sustainable timber and aerospace fabrication.',
+      fileSizeKb: 896,
+      dimensions: '1600 × 1200 px (4:3)',
     },
     pullQuote: {
       text: 'The highest achievement of embodied robotics is not an empty factory floor, but a workshop where a single craftsperson can orchestrate the physical precision of twenty hands.',
@@ -397,13 +402,13 @@ export const ARTICLES_DATA: ArticleData[] = [
     readingTimeMinutes: 7,
     wordCount: 1290,
     image: {
-      src: '/images/articles/ai-personalized-education.svg',
+      src: educationImg,
       altText:
-        'Socratic AI holographic learning sphere and student seminar analyzing quantum mechanics',
+        'Editorial documentary photograph of a futuristic university seminar room and acoustic creative studio with transparent spatial displays',
       caption:
-        'Fig. 04 — Socratic AI adaptive seminar visualizing multidimensional quantum physics models on transparent studio displays.',
-      fileSizeKb: 16.8,
-      dimensions: '800 × 600 px (4:3)',
+        'Fig. 04 — Socratic AI adaptive seminar studio: Tactile analog instruments paired with transparent spatial computing displays on warm oak desks.',
+      fileSizeKb: 910,
+      dimensions: '1600 × 1200 px (4:3)',
     },
     pullQuote: {
       text: 'When an algorithm merely gives a student the finished answer, it steals the cognitive struggle that builds neural pathways; true educational AI asks the exact question that unlocks understanding.',

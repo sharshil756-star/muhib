@@ -116,7 +116,7 @@ export const HomePage: React.FC = () => {
               <ResilientImage
                 src={HERO_EDITORIAL_IMAGE.src}
                 alt={HERO_EDITORIAL_IMAGE.altText}
-                aspectRatioClass="aspect-[16/10] lg:h-full"
+                aspectRatioClass="aspect-[16/10] w-full min-h-[280px]"
                 fileSizeKb={HERO_EDITORIAL_IMAGE.fileSizeKb}
                 dimensions={HERO_EDITORIAL_IMAGE.dimensions}
                 priority

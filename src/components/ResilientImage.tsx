@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface ResilientImageProps {
   src: string;
@@ -15,15 +15,18 @@ export const ResilientImage: React.FC<ResilientImageProps> = ({
   alt,
   className = '',
   aspectRatioClass = 'aspect-[4/3]',
-  fileSizeKb,
-  dimensions,
-  priority = false,
+  priority = true,
 }) => {
   const [hasError, setHasError] = useState(false);
 
+  // Reset error state whenever src changes
+  useEffect(() => {
+    setHasError(false);
+  }, [src]);
+
   return (
     <div
-      className={`relative overflow-hidden bg-stone-200/70 border border-stone-200 ${aspectRatioClass}`}
+      className={`relative w-full overflow-hidden bg-stone-900 border border-stone-200/80 ${aspectRatioClass}`}
     >
       {!hasError ? (
         <img
@@ -31,20 +34,38 @@ export const ResilientImage: React.FC<ResilientImageProps> = ({
           alt={alt}
           referrerPolicy="no-referrer"
           loading={priority ? 'eager' : 'lazy'}
-          width={800}
-          height={600}
-          onError={() => setHasError(true)}
-          className={`w-full h-full object-cover transition-transform duration-200 ${className}`}
+          decoding="async"
+          onError={() => {
+            console.warn('Image failed to load, switching to resilient fallback:', src);
+            setHasError(true);
+          }}
+          className={`w-full h-full object-cover block transition-transform duration-300 ${className}`}
         />
       ) : (
-        <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-stone-200">
-          <p className="font-mono-tabular text-xs uppercase tracking-widest text-stone-400 mb-2">
-            Aethelgard Archival Plate
+        /* Themed futuristic AI editorial fallback plate if network error occurs */
+        <div className="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-radial from-[#1e293b] to-[#0a0f1d] text-stone-200 select-none">
+          <svg
+            className="w-12 h-12 text-[#38BDF8] mb-3 opacity-90 animate-pulse"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 3v18" />
+            <path d="M3 12h18" />
+            <circle cx="12" cy="12" r="3" fill="#0284C7" />
+          </svg>
+          <span className="px-2.5 py-0.5 text-[10px] uppercase font-mono tracking-widest text-[#38BDF8] bg-sky-950/80 border border-sky-800 rounded">
+            Future AI Horizon Plate
+          </span>
+          <p className="text-xs text-stone-200 mt-2 max-w-sm font-editorial italic line-clamp-2">
+            {alt}
           </p>
-          <p className="font-editorial text-lg italic max-w-md text-stone-100">{alt}</p>
         </div>
       )}
-
     </div>
   );
 };
