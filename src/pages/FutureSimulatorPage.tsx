@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ARTICLES_DATA } from '../data/articlesData';
 import { updateDocumentSeoMeta } from '../utils/seoDomUpdater';
-import { SlidersHorizontal, ArrowUpRight, RotateCcw, CheckCircle2 } from 'lucide-react';
+import { SlidersHorizontal, ArrowUpRight, RotateCcw, CheckCircle2, ArrowLeft } from 'lucide-react';
 
 interface SectorSimulationModel {
   articleSlug: string;
@@ -169,7 +169,27 @@ export const FutureSimulatorPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-12">
+    <div className="min-h-screen pb-16">
+      {/* Top Breadcrumb with Anchor Text */}
+      <div className="bg-[#F5F1E8] border-b border-stone-200 text-xs text-stone-600 mb-8">
+        <div className="max-w-[1320px] mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
+          <Link
+            to="/"
+            aria-label="Return to Future AI Journal Homepage"
+            className="inline-flex items-center gap-1.5 font-medium text-stone-900 hover:text-[#9A3412] transition-colors"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Return to Future AI Journal</span>
+          </Link>
+
+          <div className="flex items-center gap-2 font-mono-tabular text-stone-500">
+            <span>Interactive Foresight Application</span>
+            <span aria-hidden="true">·</span>
+            <span>2026–2035 Horizon Atlas</span>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-[1320px] mx-auto px-6 space-y-12">
         {/* Header */}
         <header className="border-b border-stone-300 pb-8 flex flex-col lg:flex-row lg:items-end justify-between gap-6">
@@ -394,6 +414,7 @@ export const FutureSimulatorPage: React.FC = () => {
 
                 <Link
                   to={linkedArticle.urlPath}
+                  aria-label={`Read Full ${linkedArticle.mainKeyword} Monograph: ${linkedArticle.headlineH1}`}
                   className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-stone-900 text-stone-50 text-xs font-medium rounded-lg hover:bg-[#9A3412] transition-colors whitespace-nowrap shrink-0"
                 >
                   <span>Read Full {linkedArticle.mainKeyword} Monograph</span>
@@ -432,9 +453,10 @@ export const FutureSimulatorPage: React.FC = () => {
                         <td className="py-3 pl-4 text-right">
                           <Link
                             to={art.urlPath}
+                            aria-label={`Explore ${art.mainKeyword} research monograph`}
                             className="text-[#9A3412] hover:underline font-medium"
                           >
-                            Explore {art.mainKeyword} →
+                            Explore {art.mainKeyword} Monograph →
                           </Link>
                         </td>
                       </tr>

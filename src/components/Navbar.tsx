@@ -16,6 +16,7 @@ export const Navbar: React.FC = () => {
         {/* Zone 1: Single text element wordmark */}
         <Link
           to="/"
+          aria-label="Aethelgard Future Use of AI Journal Homepage"
           className="font-editorial text-2xl font-semibold tracking-tight text-stone-900 whitespace-nowrap shrink-0"
         >
           Aethelgard
@@ -62,6 +63,7 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-3 shrink-0">
           <Link
             to="/future-ai-simulator"
+            aria-label="Launch 2035 AI Impact Simulator App"
             className="px-4 py-2 text-xs font-medium rounded-lg bg-stone-900 text-stone-50 hover:bg-[#9A3412] transition-colors whitespace-nowrap shrink-0 inline-flex items-center gap-1.5"
           >
             <Sparkles className="w-3.5 h-3.5" />

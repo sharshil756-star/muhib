@@ -56,6 +56,7 @@ export const ArticleDetailPage: React.FC = () => {
         <div className="max-w-[1320px] mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
           <Link
             to="/"
+            aria-label="Return to Future AI Journal Homepage"
             className="inline-flex items-center gap-1.5 font-medium text-stone-900 hover:text-[#9A3412] transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
@@ -192,6 +193,7 @@ export const ArticleDetailPage: React.FC = () => {
                   {section.internalLink.contextSentence}{' '}
                   <Link
                     to={section.internalLink.targetUrl}
+                    aria-label={`Read research on ${section.internalLink.anchorText}`}
                     className="font-semibold text-[#9A3412] underline underline-offset-4 hover:text-stone-900 transition-colors"
                   >
                     {section.internalLink.anchorText}
@@ -228,6 +230,7 @@ export const ArticleDetailPage: React.FC = () => {
           >
             <Link
               to={prevArticle.urlPath}
+              aria-label={`Previous Monograph ${prevArticle.numberIndex}: ${prevArticle.headlineH1}`}
               className="p-5 border border-stone-200 bg-white/70 hover:border-stone-900 transition-colors group"
             >
               <span className="text-xs font-mono-tabular text-stone-500 block">
@@ -240,6 +243,7 @@ export const ArticleDetailPage: React.FC = () => {
 
             <Link
               to={nextArticle.urlPath}
+              aria-label={`Next Monograph ${nextArticle.numberIndex}: ${nextArticle.headlineH1}`}
               className="p-5 border border-stone-200 bg-white/70 hover:border-stone-900 transition-colors group text-right"
             >
               <span className="text-xs font-mono-tabular text-stone-500 block">
@@ -298,6 +302,7 @@ export const ArticleDetailPage: React.FC = () => {
             <div className="pt-2">
               <Link
                 to="/future-ai-simulator"
+                aria-label="Launch 2035 AI Impact Simulator App"
                 className="w-full py-2.5 px-4 bg-stone-900 text-stone-50 text-xs font-medium rounded text-center block hover:bg-[#9A3412] transition-colors"
               >
                 Launch 2035 AI Impact Simulator App →
@@ -316,6 +321,7 @@ export const ArticleDetailPage: React.FC = () => {
                 <li key={sec.id}>
                   <a
                     href={`#${sec.id}`}
+                    aria-label={`Jump to section 0${i + 1}: ${sec.questionH2}`}
                     className="text-stone-700 hover:text-[#9A3412] transition-colors block leading-relaxed"
                   >
                     <span className="font-mono-tabular text-stone-400 mr-1.5">0{i + 1}.</span>
@@ -339,6 +345,7 @@ export const ArticleDetailPage: React.FC = () => {
                   </span>
                   <Link
                     to={rel.urlPath}
+                    aria-label={`Read Monograph ${rel.numberIndex}: ${rel.headlineH1}`}
                     className="font-medium text-xs text-[#9A3412] hover:text-stone-900 transition-colors inline-flex items-center gap-1 mt-1"
                   >
                     <span>

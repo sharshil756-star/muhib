@@ -11,6 +11,7 @@ export const Footer: React.FC = () => {
           <div className="md:col-span-4 space-y-4">
             <Link
               to="/"
+              aria-label="Aethelgard Future Use of AI Journal Homepage"
               className="font-editorial text-2xl font-semibold text-stone-900 tracking-tight block"
             >
               Aethelgard
@@ -22,7 +23,11 @@ export const Footer: React.FC = () => {
               question-and-answer monographs.
             </p>
             <div className="pt-2 flex flex-wrap gap-4 text-xs font-medium text-[#9A3412]">
-              <Link to="/future-ai-simulator" className="hover:underline">
+              <Link
+                to="/future-ai-simulator"
+                aria-label="Launch 2035 AI Impact Simulator App"
+                className="hover:underline"
+              >
                 Launch 2035 AI Impact Simulator App →
               </Link>
             </div>
@@ -38,6 +43,7 @@ export const Footer: React.FC = () => {
                 <Link
                   key={article.id}
                   to={article.urlPath}
+                  aria-label={`Read Monograph ${article.numberIndex}: ${article.headlineH1}`}
                   className="text-stone-700 hover:text-[#9A3412] transition-colors flex items-baseline gap-2 py-0.5"
                 >
                   <span className="font-mono-tabular text-stone-400 shrink-0">

@@ -164,7 +164,12 @@ export const HomePage: React.FC = () => {
                   </span>
                 </div>
 
-                <Link to={article.urlPath} className="block overflow-hidden mb-4">
+                <Link
+                  to={article.urlPath}
+                  aria-label={`Read Monograph ${article.numberIndex}: ${article.headlineH1}`}
+                  className="block overflow-hidden mb-4"
+                >
+                  <span className="sr-only">Read Monograph {article.numberIndex}: {article.headlineH1}</span>
                   <ResilientImage
                     src={article.image.src}
                     alt={article.image.altText}
@@ -203,9 +208,10 @@ export const HomePage: React.FC = () => {
                 <div className="pt-2">
                   <Link
                     to={article.urlPath}
+                    aria-label={`Read Monograph ${article.numberIndex} Analysis: ${article.headlineH1}`}
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#9A3412] hover:text-stone-900 transition-colors"
                   >
-                    <span>Read Monograph {article.numberIndex} Analysis</span>
+                    <span>Read Monograph {article.numberIndex} Analysis: {article.mainKeyword}</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -286,7 +292,12 @@ export const HomePage: React.FC = () => {
                 className="group grid grid-cols-1 sm:grid-cols-12 gap-5 border border-stone-200 bg-white/60 p-5 hover:border-stone-400 transition-colors items-stretch"
               >
                 <div className="sm:col-span-5 flex flex-col">
-                  <Link to={article.urlPath} className="block h-full">
+                  <Link
+                    to={article.urlPath}
+                    aria-label={`Read Monograph ${article.numberIndex}: ${article.headlineH1}`}
+                    className="block h-full"
+                  >
+                    <span className="sr-only">Read Monograph {article.numberIndex}: {article.headlineH1}</span>
                     <ResilientImage
                       src={article.image.src}
                       alt={article.image.altText}
@@ -329,9 +340,10 @@ export const HomePage: React.FC = () => {
                       </span>
                       <Link
                         to={article.urlPath}
+                        aria-label={`Read Monograph ${article.numberIndex}: ${article.headlineH1}`}
                         className="inline-flex items-center gap-1 text-xs font-semibold text-[#9A3412] hover:text-stone-900 transition-colors"
                       >
-                        <span>Read Monograph {article.numberIndex}</span>
+                        <span>Read Monograph {article.numberIndex}: {article.mainKeyword}</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
