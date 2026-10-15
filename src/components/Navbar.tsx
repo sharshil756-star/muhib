@@ -1,15 +1,8 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Sparkles } from 'lucide-react';
 
-interface NavbarProps {
-  seoInspectorOpen: boolean;
-  onToggleSeoInspector: () => void;
-}
-
-export const Navbar: React.FC<NavbarProps> = ({
-  seoInspectorOpen,
-  onToggleSeoInspector,
-}) => {
+export const Navbar: React.FC = () => {
   const location = useLocation();
 
   const isActive = (path: string) => {
@@ -28,10 +21,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           Aethelgard
         </Link>
 
-        {/* Zone 2: 4–5 clean single-line text navigation links with descriptive anchor text */}
+        {/* Zone 2: Clean single-line text navigation links */}
         <nav
           aria-label="Primary Editorial Navigation"
-          className="hidden md:flex items-center gap-7 text-sm font-medium text-stone-600"
+          className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600"
         >
           <Link
             to="/"
@@ -54,16 +47,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             10 Research Articles
           </Link>
           <Link
-            to="/seo-keyword-research"
-            className={`hover:text-stone-900 transition-colors whitespace-nowrap shrink-0 py-1 ${
-              isActive('/seo-keyword-research')
-                ? 'text-stone-900 underline underline-offset-8 decoration-[#9A3412] decoration-2'
-                : ''
-            }`}
-          >
-            Keyword Research Table
-          </Link>
-          <Link
             to="/future-ai-simulator"
             className={`hover:text-stone-900 transition-colors whitespace-nowrap shrink-0 py-1 ${
               isActive('/future-ai-simulator')
@@ -77,17 +60,13 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Zone 3: 1 primary action */}
         <div className="flex items-center gap-3 shrink-0">
-          <button
-            type="button"
-            onClick={onToggleSeoInspector}
-            className={`px-4 py-2 text-xs font-medium rounded-lg transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
-              seoInspectorOpen
-                ? 'bg-[#9A3412] text-white'
-                : 'bg-stone-900 text-stone-50 hover:bg-stone-800'
-            }`}
+          <Link
+            to="/future-ai-simulator"
+            className="px-4 py-2 text-xs font-medium rounded-lg bg-stone-900 text-stone-50 hover:bg-[#9A3412] transition-colors whitespace-nowrap shrink-0 inline-flex items-center gap-1.5"
           >
-            {seoInspectorOpen ? 'Hide On-Page SEO Audit' : 'Inspect On-Page SEO'}
-          </button>
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Launch 2035 Simulator</span>
+          </Link>
         </div>
       </div>
 
@@ -101,12 +80,6 @@ export const Navbar: React.FC<NavbarProps> = ({
           className="whitespace-nowrap shrink-0 hover:text-stone-900"
         >
           10 Research Articles
-        </Link>
-        <Link
-          to="/seo-keyword-research"
-          className="whitespace-nowrap shrink-0 hover:text-stone-900"
-        >
-          Keyword Research Table
         </Link>
         <Link
           to="/future-ai-simulator"

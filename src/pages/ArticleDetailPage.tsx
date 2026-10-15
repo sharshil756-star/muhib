@@ -51,31 +51,23 @@ export const ArticleDetailPage: React.FC = () => {
 
   return (
     <article className="min-h-screen pb-20">
-      {/* Top Breadcrumb & On-Page Keyword Strip */}
+      {/* Top Breadcrumb */}
       <div className="bg-[#F5F1E8] border-b border-stone-200 text-xs text-stone-600">
         <div className="max-w-[1320px] mx-auto px-6 py-3 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-1.5 font-medium text-stone-900 hover:text-[#9A3412] transition-colors"
-            >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              <span>Return to Future Use of AI Journal Homepage</span>
-            </Link>
-            <span aria-hidden="true">·</span>
-            <span className="font-mono-tabular text-stone-500">
-              URL: {article.urlPath}
-            </span>
-          </div>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-1.5 font-medium text-stone-900 hover:text-[#9A3412] transition-colors"
+          >
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span>Return to Future AI Journal</span>
+          </Link>
 
-          <div className="flex flex-wrap items-center gap-2 font-mono-tabular">
-            <span className="text-stone-500">Main Keyword:</span>
-            <strong className="text-[#9A3412]">{article.mainKeyword}</strong>
+          <div className="flex items-center gap-2 font-mono-tabular text-stone-500">
+            <span>Monograph {article.numberIndex}</span>
             <span aria-hidden="true">·</span>
-            <span className="text-stone-500">Related:</span>
-            <span>{article.relatedKeywords[0]}</span>
-            <span aria-hidden="true">/</span>
-            <span>{article.relatedKeywords[1]}</span>
+            <span>{article.category}</span>
+            <span aria-hidden="true">·</span>
+            <span>{article.readingTimeMinutes} min read</span>
           </div>
         </div>
       </div>
@@ -136,11 +128,8 @@ export const ArticleDetailPage: React.FC = () => {
               dimensions={article.image.dimensions}
               priority
             />
-            <figcaption className="text-xs font-editorial italic text-stone-600 leading-relaxed flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1">
+            <figcaption className="text-xs font-editorial italic text-stone-600 leading-relaxed pt-1">
               <span>{article.image.caption}</span>
-              <span className="font-mono-tabular not-italic text-[11px] text-stone-500 shrink-0">
-                Alt attribute: &ldquo;{article.image.altText}&rdquo;
-              </span>
             </figcaption>
           </figure>
 
@@ -265,85 +254,53 @@ export const ArticleDetailPage: React.FC = () => {
 
         {/* Right Margin Sidebar: On-Page SEO Verification & Chapter Index (4 columns) */}
         <aside className="lg:col-span-4 space-y-8 lg:sticky lg:top-24">
-          {/* Step 3 On-Page SEO Verification Card */}
+          {/* Monograph Overview & Research Synopsis */}
           <div className="border border-stone-300 bg-white p-6 space-y-4">
             <div className="flex items-center justify-between border-b border-stone-200 pb-3">
               <span className="text-xs font-mono-tabular uppercase tracking-wider font-semibold text-[#9A3412]">
-                STEP 3 · ON-PAGE SEO RECORD
+                MONOGRAPH SYNOPSIS
               </span>
-              <span className="text-[11px] font-mono-tabular text-emerald-800">
-                100% COMPLIANT
+              <span className="text-[11px] font-mono-tabular text-stone-500">
+                NO. {article.numberIndex} / 10
               </span>
             </div>
 
             <dl className="space-y-3 text-xs">
               <div className="border-b border-stone-100 pb-2.5">
-                <dt className="text-stone-500 font-medium">1. Unique URL (Good URL Rules):</dt>
-                <dd className="font-mono-tabular text-stone-900 mt-1 break-all bg-stone-50 p-1.5 border border-stone-200">
-                  {article.urlPath}
-                </dd>
+                <dt className="text-stone-500 font-medium">Domain &amp; Field:</dt>
+                <dd className="font-semibold text-stone-900 mt-0.5">{article.category}</dd>
               </div>
 
               <div className="border-b border-stone-100 pb-2.5">
-                <dt className="text-stone-500 font-medium">2. Main Keyword (1):</dt>
+                <dt className="text-stone-500 font-medium">Lead Investigator:</dt>
+                <dd className="text-stone-900 mt-0.5 font-medium">{article.author.name}</dd>
+                <dd className="text-stone-500 italic mt-0.5">{article.author.institution}</dd>
+              </div>
+
+              <div className="border-b border-stone-100 pb-2.5">
+                <dt className="text-stone-500 font-medium">2035 Horizon Milestone:</dt>
                 <dd className="font-mono-tabular font-semibold text-[#9A3412] mt-0.5 text-sm">
-                  {article.mainKeyword}
+                  {article.forecast2035Metric.value}
                 </dd>
-              </div>
-
-              <div className="border-b border-stone-100 pb-2.5">
-                <dt className="text-stone-500 font-medium">3. Related Keywords (2):</dt>
-                <dd className="font-mono-tabular text-stone-900 mt-1 space-y-1">
-                  <div className="bg-stone-50 px-2 py-1 border border-stone-200">
-                    • {article.relatedKeywords[0]}
-                  </div>
-                  <div className="bg-stone-50 px-2 py-1 border border-stone-200">
-                    • {article.relatedKeywords[1]}
-                  </div>
-                </dd>
-              </div>
-
-              <div className="border-b border-stone-100 pb-2.5">
-                <dt className="text-stone-500 font-medium flex justify-between">
-                  <span>4. Page Title Tag:</span>
-                  <span className="font-mono-tabular text-emerald-800">
-                    {article.seoTitle.length} chars
-                  </span>
-                </dt>
-                <dd className="text-stone-800 mt-1 leading-relaxed">{article.seoTitle}</dd>
-              </div>
-
-              <div className="border-b border-stone-100 pb-2.5">
-                <dt className="text-stone-500 font-medium flex justify-between">
-                  <span>5. Meta Description Tag:</span>
-                  <span className="font-mono-tabular text-emerald-800">
-                    {article.metaDescription.length} chars
-                  </span>
-                </dt>
-                <dd className="text-stone-800 mt-1 leading-relaxed">
-                  {article.metaDescription}
+                <dd className="text-stone-600 mt-1 leading-relaxed">
+                  {article.forecast2035Metric.label}
                 </dd>
               </div>
 
               <div>
-                <dt className="text-stone-500 font-medium flex justify-between">
-                  <span>6. Image Size &amp; Alt Text:</span>
-                  <span className="font-mono-tabular text-emerald-800">
-                    {article.image.fileSizeKb} KB
-                  </span>
-                </dt>
-                <dd className="text-stone-700 mt-1 italic leading-relaxed">
-                  &ldquo;{article.image.altText}&rdquo;
+                <dt className="text-stone-500 font-medium">Empirical Baseline:</dt>
+                <dd className="text-stone-700 mt-0.5 leading-relaxed">
+                  {article.forecast2035Metric.baselineComparison}
                 </dd>
               </div>
             </dl>
 
             <div className="pt-2">
               <Link
-                to="/seo-keyword-research"
+                to="/future-ai-simulator"
                 className="w-full py-2.5 px-4 bg-stone-900 text-stone-50 text-xs font-medium rounded text-center block hover:bg-[#9A3412] transition-colors"
               >
-                View Full Step 2 Keyword Research Table
+                Launch 2035 AI Impact Simulator App →
               </Link>
             </div>
           </div>

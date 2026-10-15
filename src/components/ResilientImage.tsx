@@ -45,12 +45,6 @@ export const ResilientImage: React.FC<ResilientImageProps> = ({
         </div>
       )}
 
-      {fileSizeKb && (
-        <div className="absolute bottom-2.5 right-2.5 bg-stone-950/75 backdrop-blur-xs text-stone-100 px-2 py-0.5 text-[11px] font-mono-tabular">
-          {dimensions ? `${dimensions} · ` : ''}
-          {fileSizeKb} KB · ALT VERIFIED
-        </div>
-      )}
     </div>
   );
 };

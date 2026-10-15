@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="robotGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#EA580C" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#0284C7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0B0E14" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="#0B0E14"/>
+  <rect width="800" height="600" fill="url(#robotGlow)"/>
+
+  <!-- Atelier Studio Grid & Work Table -->
+  <g stroke="#1E293B" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="450" x2="800" y2="450"/>
+    <line x1="0" y1="520" x2="800" y2="520"/>
+    <line x1="150" y1="450" x2="80" y2="600"/>
+    <line x1="350" y1="450" x2="300" y2="600"/>
+    <line x1="550" y1="450" x2="520" y2="600"/>
+    <line x1="700" y1="450" x2="720" y2="600"/>
+  </g>
+
+  <!-- Advanced Humanoid Robotic Head & Torso (Left / Center) -->
+  <!-- Robot Head & Optical Sensor Visor -->
+  <rect x="230" y="140" width="90" height="110" rx="20" fill="#1E293B" stroke="#64748B" stroke-width="2"/>
+  <!-- Glowing Cyan Visor -->
+  <rect x="245" y="175" width="60" height="18" rx="6" fill="#0284C7" stroke="#38BDF8" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="265" cy="184" r="3.5" fill="#F8FAFC"/>
+  <circle cx="285" cy="184" r="3.5" fill="#F8FAFC"/>
+
+  <!-- Robot Neck & Titanium Collar Joint -->
+  <rect x="260" y="250" width="30" height="25" fill="#334155" stroke="#64748B"/>
+  <ellipse cx="275" cy="285" rx="50" ry="16" fill="#0F172A" stroke="#EA580C" stroke-width="2"/>
+
+  <!-- Robot Torso Frame -->
+  <path d="M 210 300 L 340 300 L 320 450 L 230 450 Z" fill="#1E293B" stroke="#64748B" stroke-width="2"/>
+  <!-- Luminous Chest Core (Energy & Compute Engine) -->
+  <circle cx="275" cy="350" r="24" fill="#0F172A" stroke="#38BDF8" stroke-width="2"/>
+  <circle cx="275" cy="350" r="14" fill="#EA580C" stroke="#F59E0B" stroke-width="1.5" filter="url(#glow)"/>
+
+  <!-- High-Precision Cobot Articulated Arm Reaching to Center -->
+  <g stroke="#64748B" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M 330 310 L 410 350 L 470 320 L 520 370"/>
+  </g>
+  <!-- Arm Joint Rings -->
+  <circle cx="330" cy="310" r="12" fill="#EA580C" stroke="#F8FAFC" stroke-width="2"/>
+  <circle cx="410" cy="350" r="10" fill="#38BDF8" stroke="#F8FAFC" stroke-width="2"/>
+  <circle cx="470" cy="320" r="9" fill="#EA580C" stroke="#F8FAFC" stroke-width="2"/>
+
+  <!-- Tactile Robotic Gripper with Laser Guide (Center) -->
+  <g stroke="#38BDF8" stroke-width="3" fill="#0F172A">
+    <path d="M 520 370 L 545 355 L 565 375"/>
+    <path d="M 520 370 L 545 385 L 565 380"/>
+  </g>
+  <circle cx="560" cy="375" r="4" fill="#F59E0B" filter="url(#glow)"/>
+
+  <!-- Floating Holographic Micro-Component Assembly Blueprint -->
+  <g fill="none" stroke="#38BDF8" stroke-width="1.5" filter="url(#glow)">
+    <polygon points="560,340 640,310 690,360 610,390" stroke="#38BDF8"/>
+    <polygon points="560,340 640,310 640,350 560,380" stroke="#F59E0B"/>
+    <line x1="640" y1="310" x2="640" y2="350"/>
+    <line x1="690" y1="360" x2="690" y2="400"/>
+    <line x1="610" y1="390" x2="610" y2="430"/>
+    <polygon points="560,380 640,350 690,400 610,430" stroke="#38BDF8" stroke-dasharray="4 4"/>
+  </g>
+
+  <!-- Human Artisan Hand (Right, Reaching into Shared Space with Tactile Trust) -->
+  <g fill="#D97706" opacity="0.8">
+    <path d="M 720 440 C 680 430, 660 410, 640 405 C 630 402, 620 410, 630 415 C 645 422, 660 435, 680 455 Z"/>
+    <path d="M 720 460 C 675 450, 650 435, 635 430 C 625 427, 618 435, 628 440 C 645 448, 665 465, 690 480 Z"/>
+  </g>
+
+  <!-- Tactile Force HUD Display -->
+  <g fill="#0B132B" fill-opacity="0.85" stroke="#1E293B" stroke-width="1">
+    <rect x="80" y="40" width="240" height="75" rx="5"/>
+    <text x="95" y="65" fill="#EA580C" font-family="monospace" font-size="11" letter-spacing="1">TACTILE VLA COBOT</text>
+    <text x="95" y="85" fill="#F8FAFC" font-family="monospace" font-size="12">FORCE COMPLIANCE: 0.04 N</text>
+    <text x="95" y="103" fill="#38BDF8" font-family="monospace" font-size="10">HUMAN-IN-THE-LOOP ACTIVE</text>
+  </g>
+
+  <text x="60" y="565" fill="#94A3B8" font-family="monospace" font-size="12" letter-spacing="2">FIG 03 · FUTURE OF EMBODIED AI ROBOTICS &amp; COBOT CRAFT · 19.1 KB</text>
+</svg>

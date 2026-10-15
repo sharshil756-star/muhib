@@ -5,16 +5,14 @@ import {
   HERO_EDITORIAL_IMAGE,
   HOMEPAGE_AEO_FAQS,
   HOMEPAGE_SEO_CONFIG,
-  ALL_SEO_KEYWORD_TABLE_ROWS,
 } from '../data/articlesData';
 import { ResilientImage } from '../components/ResilientImage';
 import { updateDocumentSeoMeta } from '../utils/seoDomUpdater';
-import { ArrowUpRight, Search, SlidersHorizontal, Table as TableIcon, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Search, SlidersHorizontal, Sparkles } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [tableScope, setTableScope] = useState<'core4' | 'all11'>('core4');
 
   useEffect(() => {
     updateDocumentSeoMeta(HOMEPAGE_SEO_CONFIG, undefined, HOMEPAGE_AEO_FAQS);
@@ -44,40 +42,10 @@ export const HomePage: React.FC = () => {
   });
 
   const coreThreeArticles = ARTICLES_DATA.filter((a) => a.isCoreThree);
-  const displayedKeywordRows =
-    tableScope === 'core4'
-      ? ALL_SEO_KEYWORD_TABLE_ROWS.filter((r) => r.isCoreStep2Target)
-      : ALL_SEO_KEYWORD_TABLE_ROWS;
 
   return (
     <div className="min-h-screen">
-      {/* Operational & SEO Keyword Telemetry Strip */}
-      <div className="border-b border-stone-200 bg-[#F5F1E8] text-xs text-stone-600">
-        <div className="max-w-[1320px] mx-auto px-6 py-2.5 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="font-semibold text-stone-900">Homepage Main Keyword:</span>
-            <span className="font-mono-tabular text-[#9A3412] font-medium">
-              {HOMEPAGE_SEO_CONFIG.mainKeyword}
-            </span>
-            <span aria-hidden="true">·</span>
-            <span className="font-semibold text-stone-900">Related Keywords:</span>
-            <span className="font-mono-tabular text-stone-700">
-              {HOMEPAGE_SEO_CONFIG.relatedKeywords[0]}
-            </span>
-            <span aria-hidden="true">/</span>
-            <span className="font-mono-tabular text-stone-700">
-              {HOMEPAGE_SEO_CONFIG.relatedKeywords[1]}
-            </span>
-          </div>
-          <div className="flex items-center gap-3 font-mono-tabular text-stone-500">
-            <span>10 Long-Form Articles</span>
-            <span aria-hidden="true">·</span>
-            <span>10 Unique Images &amp; URLs</span>
-            <span aria-hidden="true">·</span>
-            <span>AEO Question-Answer Format</span>
-          </div>
-        </div>
-      </div>
+
 
       {/* Tier 1: Lead Editorial Hero Split */}
       <section className="max-w-[1320px] mx-auto px-6 pt-10 pb-14 border-b border-stone-200">
@@ -112,12 +80,12 @@ export const HomePage: React.FC = () => {
                   <span>Read Monograph 01: Future of AI in Healthcare Diagnostics</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
-                <Link
-                  to="/seo-keyword-research"
+                <a
+                  href="#all-articles"
                   className="px-4 py-3 border border-stone-300 text-stone-800 text-xs font-medium rounded-lg hover:border-stone-900 transition-colors whitespace-nowrap shrink-0"
                 >
-                  Open Step 2 Keyword Research Table
-                </Link>
+                  Explore All 10 Monographs
+                </a>
               </div>
 
               <div className="grid grid-cols-3 gap-6 pt-2">
@@ -217,22 +185,16 @@ export const HomePage: React.FC = () => {
               <div className="pt-5 mt-5 border-t border-stone-200/80 space-y-3">
                 <div className="text-xs space-y-1">
                   <div className="flex items-baseline justify-between gap-2">
-                    <span className="text-stone-500">Main Keyword:</span>
-                    <span className="font-mono-tabular font-semibold text-stone-900">
-                      {article.mainKeyword}
-                    </span>
+                    <span className="text-stone-500">Lead Investigator:</span>
+                    <span className="font-medium text-stone-900">{article.author.name}</span>
                   </div>
                   <div className="flex items-baseline justify-between gap-2">
-                    <span className="text-stone-500">Related Keywords:</span>
-                    <span className="font-mono-tabular text-stone-700 text-right">
-                      {article.relatedKeywords[0]} · {article.relatedKeywords[1]}
-                    </span>
+                    <span className="text-stone-500">Affiliation:</span>
+                    <span className="text-stone-700 text-right truncate max-w-[210px]">{article.author.institution}</span>
                   </div>
                   <div className="flex items-baseline justify-between gap-2">
-                    <span className="text-stone-500">Unique URL:</span>
-                    <span className="font-mono-tabular text-stone-600 truncate max-w-[210px]">
-                      {article.urlPath}
-                    </span>
+                    <span className="text-stone-500">2035 Horizon:</span>
+                    <span className="font-mono-tabular font-semibold text-[#9A3412]">{article.forecast2035Metric.value}</span>
                   </div>
                 </div>
 
@@ -241,7 +203,7 @@ export const HomePage: React.FC = () => {
                     to={article.urlPath}
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#9A3412] hover:text-stone-900 transition-colors"
                   >
-                    <span>Explore {article.mainKeyword} research monograph</span>
+                    <span>Read Monograph {article.numberIndex} Analysis</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
@@ -353,23 +315,21 @@ export const HomePage: React.FC = () => {
                   </div>
 
                   <div className="pt-3 mt-3 border-t border-stone-200/80 space-y-2">
-                    <div className="text-[11px] font-mono-tabular text-stone-600">
-                      <span className="text-stone-400">Main KW:</span>{' '}
-                      <strong className="text-stone-900">{article.mainKeyword}</strong>
+                    <div className="text-[11px] text-stone-600 truncate">
+                      <span className="font-medium text-stone-900">{article.author.name}</span>
                       <span aria-hidden="true"> · </span>
-                      <span className="text-stone-400">Related:</span> {article.relatedKeywords[0]},{' '}
-                      {article.relatedKeywords[1]}
+                      <span className="text-stone-500 italic">{article.author.institution}</span>
                     </div>
 
                     <div className="flex items-center justify-between gap-2 pt-1">
-                      <span className="font-mono-tabular text-[11px] text-stone-500">
-                        2035 Impact: {article.forecast2035Metric.value}
+                      <span className="font-mono-tabular text-[11px] text-[#9A3412] font-semibold">
+                        2035 Horizon: {article.forecast2035Metric.value}
                       </span>
                       <Link
                         to={article.urlPath}
                         className="inline-flex items-center gap-1 text-xs font-semibold text-[#9A3412] hover:text-stone-900 transition-colors"
                       >
-                        <span>Read {article.mainKeyword} analysis</span>
+                        <span>Read Monograph {article.numberIndex}</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
                       </Link>
                     </div>
@@ -381,113 +341,7 @@ export const HomePage: React.FC = () => {
         )}
       </section>
 
-      {/* Step 2 Embedded Section: Keyword Research Table for Homepage & Articles */}
-      <section className="max-w-[1320px] mx-auto px-6 py-14 border-b border-stone-200">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
-          <div>
-            <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[#9A3412] font-semibold">
-              <TableIcon className="w-3.5 h-3.5" />
-              <span>STEP 2 DELIVERABLE · ON-PAGE SEO KEYWORD RESEARCH TABLE</span>
-            </div>
-            <h2 className="font-editorial text-3xl sm:text-4xl font-semibold text-stone-900 mt-1">
-              What Are the Primary and Related Keywords for the Homepage and Articles?
-            </h2>
-            <p className="text-sm text-stone-600 mt-1 max-w-2xl">
-              Every page in the Aethelgard architecture maps a dedicated URL slug to 1 Main Keyword
-              and 2 Related Keywords, paired with verified title lengths (≤ 60 chars) and meta descriptions (140–160 chars).
-            </p>
-          </div>
 
-          <div className="flex flex-wrap items-center gap-3">
-            <div className="flex items-center gap-1 p-1 bg-stone-200/70 rounded-lg">
-              <button
-                type="button"
-                onClick={() => setTableScope('core4')}
-                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
-                  tableScope === 'core4'
-                    ? 'bg-white text-stone-900 shadow-xs'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-              >
-                Homepage + 3 Core Articles (Step 2)
-              </button>
-              <button
-                type="button"
-                onClick={() => setTableScope('all11')}
-                className={`px-3 py-1.5 text-xs font-medium rounded-md transition-colors whitespace-nowrap shrink-0 cursor-pointer ${
-                  tableScope === 'all11'
-                    ? 'bg-white text-stone-900 shadow-xs'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
-              >
-                Homepage + All 10 Articles (11 Pages)
-              </button>
-            </div>
-            <Link
-              to="/seo-keyword-research"
-              className="px-3.5 py-2 bg-stone-900 text-stone-50 text-xs font-medium rounded-lg hover:bg-stone-800 transition-colors whitespace-nowrap shrink-0"
-            >
-              Open Full SEO Audit Matrix →
-            </Link>
-          </div>
-        </div>
-
-        <div className="overflow-x-auto border border-stone-300 bg-white">
-          <table className="w-full text-left border-collapse">
-            <thead>
-              <tr className="border-b border-stone-300 bg-[#F3EFE6] text-[11px] font-semibold uppercase tracking-wider text-stone-700">
-                <th className="py-3.5 px-4">Page &amp; Unique URL</th>
-                <th className="py-3.5 px-4">Main Keyword (1)</th>
-                <th className="py-3.5 px-4">Related Keyword 1</th>
-                <th className="py-3.5 px-4">Related Keyword 2</th>
-                <th className="py-3.5 px-4 text-right">Monthly Vol.</th>
-                <th className="py-3.5 px-4 text-right">KD %</th>
-                <th className="py-3.5 px-4">SEO Title &amp; Meta Rules</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-stone-200 text-xs">
-              {displayedKeywordRows.map((row) => (
-                <tr key={row.urlPath} className="hover:bg-stone-50/90 transition-colors">
-                  <td className="py-3.5 px-4 align-top">
-                    <div className="font-semibold text-stone-900">{row.pageName}</div>
-                    <Link
-                      to={row.urlPath}
-                      className="font-mono-tabular text-[11px] text-[#9A3412] hover:underline inline-block mt-0.5"
-                    >
-                      {row.urlPath === '/'
-                        ? 'Visit Homepage (/)'
-                        : `Open ${row.mainKeyword} page (${row.urlPath})`}
-                    </Link>
-                  </td>
-                  <td className="py-3.5 px-4 align-top font-mono-tabular font-semibold text-stone-900">
-                    {row.mainKeyword}
-                  </td>
-                  <td className="py-3.5 px-4 align-top font-mono-tabular text-stone-700">
-                    {row.relatedKeywords[0]}
-                  </td>
-                  <td className="py-3.5 px-4 align-top font-mono-tabular text-stone-700">
-                    {row.relatedKeywords[1]}
-                  </td>
-                  <td className="py-3.5 px-4 align-top font-mono-tabular text-right text-stone-900">
-                    {row.monthlySearchVolume.toLocaleString()}
-                  </td>
-                  <td className="py-3.5 px-4 align-top font-mono-tabular text-right text-stone-700">
-                    {row.keywordDifficulty}/100
-                  </td>
-                  <td className="py-3.5 px-4 align-top text-stone-600 max-w-xs">
-                    <div className="font-mono-tabular text-[11px] text-emerald-800">
-                      Title: {row.seoTitle.length} chars · Meta: {row.metaDescription.length} chars
-                    </div>
-                    <div className="truncate text-[11px] text-stone-500 mt-0.5">
-                      {row.seoTitle}
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
 
       {/* Homepage AEO Question & Answer Section + Interactive Foresight CTA */}
       <section className="max-w-[1320px] mx-auto px-6 py-14">

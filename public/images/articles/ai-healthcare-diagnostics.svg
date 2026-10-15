@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="medGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#0F172A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#080C14" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="#080C14"/>
+  <rect width="800" height="600" fill="url(#medGlow)"/>
+
+  <!-- Grid overlay -->
+  <g stroke="#1E293B" stroke-width="1" opacity="0.6">
+    <line x1="80" y1="0" x2="80" y2="600"/>
+    <line x1="720" y1="0" x2="720" y2="600"/>
+    <line x1="0" y1="120" x2="800" y2="120"/>
+    <line x1="0" y1="480" x2="800" y2="480"/>
+  </g>
+
+  <!-- Holographic Scanner Pedestal Rings -->
+  <ellipse cx="400" cy="510" rx="220" ry="45" fill="none" stroke="#38BDF8" stroke-width="2" opacity="0.75"/>
+  <ellipse cx="400" cy="510" rx="160" ry="32" fill="#0284C7" fill-opacity="0.15" stroke="#38BDF8" stroke-width="1.5"/>
+  <ellipse cx="400" cy="510" rx="80" ry="16" fill="#38BDF8" fill-opacity="0.4" stroke="#F8FAFC" stroke-width="2" filter="url(#glow)"/>
+
+  <!-- Vertical Scan Laser Beams -->
+  <line x1="240" y1="100" x2="240" y2="510" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 6" opacity="0.4"/>
+  <line x1="560" y1="100" x2="560" y2="510" stroke="#38BDF8" stroke-width="1" stroke-dasharray="4 6" opacity="0.4"/>
+  <line x1="180" y1="280" x2="620" y2="280" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="8 4" filter="url(#glow)" opacity="0.85"/>
+
+  <!-- Luminous Human Digital Twin Silhouette with Neural Circuits -->
+  <g fill="none" stroke="#38BDF8" stroke-width="1.75" filter="url(#glow)" opacity="0.95">
+    <!-- Head & Brain Neural Cluster -->
+    <circle cx="400" cy="180" r="32" stroke="#38BDF8" stroke-width="2"/>
+    <circle cx="400" cy="180" r="18" stroke="#F59E0B" stroke-dasharray="3 3"/>
+    <circle cx="400" cy="180" r="4" fill="#F8FAFC"/>
+    <!-- Spine & Torso Grid -->
+    <line x1="400" y1="212" x2="400" y2="390" stroke="#F8FAFC" stroke-width="2.5"/>
+    <ellipse cx="400" cy="270" rx="65" ry="40" stroke="#38BDF8"/>
+    <ellipse cx="400" cy="330" rx="55" ry="35" stroke="#38BDF8"/>
+    <!-- Arms & Legs Vector Lines -->
+    <path d="M 335 250 L 290 320 L 260 390"/>
+    <path d="M 465 250 L 510 320 L 540 390"/>
+    <path d="M 370 380 L 350 460 L 340 510"/>
+    <path d="M 430 380 L 450 460 L 460 510"/>
+  </g>
+
+  <!-- Vital Biometric & DNA Helix HUD Holograms -->
+  <!-- Left HUD: DNA Helix Model -->
+  <g stroke="#38BDF8" stroke-width="1.5" fill="none" opacity="0.9">
+    <rect x="70" y="160" width="170" height="230" rx="6" fill="#0B132B" fill-opacity="0.85" stroke="#1E293B"/>
+    <text x="85" y="185" fill="#38BDF8" font-family="monospace" font-size="11" letter-spacing="1">GENOMIC SEQUENCER</text>
+    <!-- DNA ladder curve -->
+    <path d="M 120 210 Q 155 240 120 270 T 120 330 T 120 370" stroke="#F59E0B" stroke-width="2"/>
+    <path d="M 190 210 Q 155 240 190 270 T 190 330 T 190 370" stroke="#38BDF8" stroke-width="2"/>
+    <line x1="120" y1="210" x2="190" y2="210" stroke="#E2E8F0"/>
+    <line x1="135" y1="240" x2="175" y2="240" stroke="#E2E8F0"/>
+    <line x1="120" y1="270" x2="190" y2="270" stroke="#E2E8F0"/>
+    <line x1="135" y1="300" x2="175" y2="300" stroke="#E2E8F0"/>
+    <line x1="120" y1="330" x2="190" y2="330" stroke="#E2E8F0"/>
+    <text x="85" y="380" fill="#10B981" font-family="monospace" font-size="10">TP53 MUTATION: 0%</text>
+  </g>
+
+  <!-- Right HUD: ECG & Neural Bio-Telemetrics -->
+  <g stroke="#38BDF8" stroke-width="1.5" fill="none" opacity="0.9">
+    <rect x="560" y="160" width="180" height="230" rx="6" fill="#0B132B" fill-opacity="0.85" stroke="#1E293B"/>
+    <text x="575" y="185" fill="#38BDF8" font-family="monospace" font-size="11" letter-spacing="1">PREDICTIVE DIAGNOSTICS</text>
+    <!-- Pulse wave -->
+    <path d="M 575 240 L 610 240 L 620 215 L 630 265 L 640 230 L 650 240 L 720 240" stroke="#10B981" stroke-width="2" filter="url(#glow)"/>
+    <text x="575" y="275" fill="#E2E8F0" font-family="monospace" font-size="12">PRE-SYMPTOM LEAD: +4.5 YRS</text>
+    <text x="575" y="300" fill="#94A3B8" font-family="monospace" font-size="10">BIO-TWIN FIDELITY: 99.4%</text>
+    <!-- Circular progress -->
+    <circle cx="650" cy="345" r="22" stroke="#1E293B" stroke-width="4"/>
+    <circle cx="650" cy="345" r="22" stroke="#F59E0B" stroke-width="4" stroke-dasharray="100 40" stroke-linecap="round"/>
+    <text x="638" y="350" fill="#F8FAFC" font-family="monospace" font-size="10">AI-OK</text>
+  </g>
+
+  <text x="70" y="565" fill="#94A3B8" font-family="monospace" font-size="12" letter-spacing="2">FIG 01 · FUTURE OF AI HEALTHCARE DIAGNOSTICS &amp; GENOMICS · 18.2 KB</text>
+</svg>

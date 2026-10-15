@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <radialGradient id="neuralGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#0F172A" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090D16" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="cyanGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep Canvas Background -->
+  <rect width="1280" height="720" fill="#070A11"/>
+  <rect width="1280" height="720" fill="url(#neuralGlow)"/>
+
+  <!-- Perspective Floor Grid (Future Research Pavilion) -->
+  <g stroke="#1E293B" stroke-width="1" opacity="0.65">
+    <line x1="640" y1="420" x2="-200" y2="720"/>
+    <line x1="640" y1="420" x2="60" y2="720"/>
+    <line x1="640" y1="420" x2="280" y2="720"/>
+    <line x1="640" y1="420" x2="480" y2="720"/>
+    <line x1="640" y1="420" x2="640" y2="720"/>
+    <line x1="640" y1="420" x2="800" y2="720"/>
+    <line x1="640" y1="420" x2="1000" y2="720"/>
+    <line x1="640" y1="420" x2="1220" y2="720"/>
+    <line x1="640" y1="420" x2="1480" y2="720"/>
+    <line x1="0" y1="480" x2="1280" y2="480"/>
+    <line x1="0" y1="540" x2="1280" y2="540"/>
+    <line x1="0" y1="610" x2="1280" y2="610"/>
+    <line x1="0" y1="680" x2="1280" y2="680"/>
+  </g>
+
+  <!-- Quantum AI Luminous Core (Spherical Neural Hologram) -->
+  <circle cx="640" cy="310" r="190" fill="#0B132B" stroke="#0284C7" stroke-width="1.5" opacity="0.4"/>
+  <circle cx="640" cy="310" r="160" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.8"/>
+  <circle cx="640" cy="310" r="115" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="14 10" filter="url(#glowEffect)"/>
+
+  <!-- Orbital Synapse Rings -->
+  <ellipse cx="640" cy="310" rx="260" ry="85" fill="none" stroke="#38BDF8" stroke-width="1.5" transform="rotate(-15 640 310)" opacity="0.75"/>
+  <ellipse cx="640" cy="310" rx="260" ry="85" fill="none" stroke="#F97316" stroke-width="1.5" stroke-dasharray="10 8" transform="rotate(25 640 310)" opacity="0.8"/>
+  <ellipse cx="640" cy="310" rx="280" ry="95" fill="none" stroke="#A78BFA" stroke-width="1.2" transform="rotate(70 640 310)" opacity="0.6"/>
+
+  <!-- Neural Nodes & Synaptic Vectors -->
+  <g stroke="url(#cyanGold)" stroke-width="1.5" opacity="0.85">
+    <line x1="640" y1="310" x2="520" y2="230"/>
+    <line x1="640" y1="310" x2="760" y2="220"/>
+    <line x1="640" y1="310" x2="480" y2="340"/>
+    <line x1="640" y1="310" x2="800" y2="330"/>
+    <line x1="640" y1="310" x2="570" y2="400"/>
+    <line x1="640" y1="310" x2="710" y2="400"/>
+    <line x1="520" y1="230" x2="430" y2="180"/>
+    <line x1="760" y1="220" x2="860" y2="170"/>
+    <line x1="480" y1="340" x2="380" y2="360"/>
+    <line x1="800" y1="330" x2="910" y2="350"/>
+  </g>
+
+  <!-- Glowing Synapse Particles -->
+  <circle cx="640" cy="310" r="14" fill="#F8FAFC" filter="url(#glowEffect)"/>
+  <circle cx="520" cy="230" r="8" fill="#38BDF8" filter="url(#glowEffect)"/>
+  <circle cx="760" cy="220" r="8" fill="#F59E0B" filter="url(#glowEffect)"/>
+  <circle cx="480" cy="340" r="7" fill="#818CF8"/>
+  <circle cx="800" cy="330" r="7" fill="#38BDF8"/>
+  <circle cx="430" cy="180" r="5" fill="#38BDF8"/>
+  <circle cx="860" cy="170" r="5" fill="#F59E0B"/>
+  <circle cx="380" cy="360" r="5" fill="#A78BFA"/>
+  <circle cx="910" cy="350" r="5" fill="#38BDF8"/>
+  <circle cx="570" cy="400" r="6" fill="#F97316"/>
+  <circle cx="710" cy="400" r="6" fill="#38BDF8"/>
+
+  <!-- Vertical Data Hologram Beams -->
+  <rect x="637" y="60" width="6" height="520" fill="url(#beamGrad)" opacity="0.6"/>
+  <rect x="517" y="120" width="4" height="420" fill="url(#beamGrad)" opacity="0.35"/>
+  <rect x="758" y="110" width="4" height="430" fill="url(#beamGrad)" opacity="0.35"/>
+
+  <!-- Human Researchers Silhouettes at Workstations (Foreground Presence) -->
+  <g fill="#0E1626">
+    <!-- Left Scientist -->
+    <path d="M 330 630 C 330 575, 345 550, 365 540 C 355 530, 355 515, 365 505 C 375 495, 395 495, 405 505 C 415 515, 415 530, 405 540 C 425 550, 440 575, 440 630 Z"/>
+    <!-- Right Scientist -->
+    <path d="M 840 630 C 840 575, 855 550, 875 540 C 865 530, 865 515, 875 505 C 885 495, 905 495, 915 505 C 925 515, 925 530, 915 540 C 935 550, 950 575, 950 630 Z"/>
+  </g>
+
+  <!-- Holographic Floating HUD Displays in front of researchers -->
+  <g fill="none" stroke="#38BDF8" stroke-width="1.2" opacity="0.85">
+    <!-- Left HUD -->
+    <rect x="340" y="470" width="130" height="70" rx="4" fill="#0B132B" fill-opacity="0.75" stroke="#38BDF8"/>
+    <line x1="355" y1="485" x2="420" y2="485"/>
+    <line x1="355" y1="495" x2="450" y2="495"/>
+    <line x1="355" y1="505" x2="410" y2="505"/>
+    <circle cx="445" cy="520" r="10" stroke="#F59E0B"/>
+    <!-- Right HUD -->
+    <rect x="810" y="470" width="140" height="70" rx="4" fill="#0B132B" fill-opacity="0.75" stroke="#38BDF8"/>
+    <path d="M 825 520 L 845 500 L 865 515 L 890 485 L 920 510" stroke="#F59E0B" stroke-width="1.5"/>
+    <line x1="825" y1="485" x2="880" y2="485"/>
+  </g>
+
+  <!-- Technical Telemetry Typography -->
+  <text x="60" y="80" fill="#94A3B8" font-family="monospace" font-size="13" letter-spacing="3">HORIZON 2035 · AUTONOMOUS NEURAL WORLD MODEL · AETHELGARD CORE</text>
+  <text x="60" y="105" fill="#38BDF8" font-family="monospace" font-size="11" letter-spacing="1.5">GLOBAL SYNAPSE TOPOLOGY: ONLINE · 10 DOMAINS FEDERATED</text>
+</svg>

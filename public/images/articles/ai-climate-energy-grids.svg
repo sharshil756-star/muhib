@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <radialGradient id="gridGlow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#059669" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#0284C7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#061214" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="#061214"/>
+  <rect width="800" height="600" fill="url(#gridGlow)"/>
+
+  <!-- Atmospheric Sky Gradient & Wind Streamlines -->
+  <g stroke="#10B981" stroke-width="1.2" opacity="0.3" fill="none">
+    <path d="M 0 140 C 200 110, 400 170, 800 120"/>
+    <path d="M 0 170 C 250 140, 500 200, 800 150"/>
+    <path d="M 0 200 C 180 170, 420 230, 800 180"/>
+  </g>
+
+  <!-- Mountain/Fjord Landscape Silhouette -->
+  <polygon points="0,460 160,340 320,410 500,320 680,390 800,330 800,600 0,600" fill="#0B1C1D"/>
+
+  <!-- Coastal Fjord Water with Reflective AI Grid Lines -->
+  <rect x="0" y="440" width="800" height="160" fill="#07191C"/>
+  <g stroke="#34D399" stroke-width="1" opacity="0.35">
+    <line x1="0" y1="460" x2="800" y2="460"/>
+    <line x1="0" y1="490" x2="800" y2="490"/>
+    <line x1="0" y1="530" x2="800" y2="530"/>
+    <line x1="0" y1="575" x2="800" y2="575"/>
+  </g>
+
+  <!-- Futuristic Autonomous Clean Energy Architecture: Solar & Wind Towers -->
+  <!-- Wind Turbine 1 -->
+  <g stroke="#38BDF8" stroke-width="2" fill="none">
+    <line x1="220" y1="440" x2="220" y2="240"/>
+    <circle cx="220" cy="240" r="7" fill="#F8FAFC"/>
+    <!-- Blades with rotation motion hint -->
+    <line x1="220" y1="240" x2="220" y2="165" stroke="#34D399" stroke-width="2.5"/>
+    <line x1="220" y1="240" x2="285" y2="280" stroke="#34D399" stroke-width="2.5"/>
+    <line x1="220" y1="240" x2="155" y2="280" stroke="#34D399" stroke-width="2.5"/>
+  </g>
+
+  <!-- Wind Turbine 2 -->
+  <g stroke="#38BDF8" stroke-width="2" fill="none">
+    <line x1="580" y1="420" x2="580" y2="210"/>
+    <circle cx="580" cy="210" r="7" fill="#F8FAFC"/>
+    <line x1="580" y1="210" x2="580" y2="130" stroke="#34D399" stroke-width="2.5"/>
+    <line x1="580" y1="210" x2="650" y2="255" stroke="#34D399" stroke-width="2.5"/>
+    <line x1="580" y1="210" x2="510" y2="255" stroke="#34D399" stroke-width="2.5"/>
+  </g>
+
+  <!-- Central Direct Air Carbon Capture & Fusion Substation -->
+  <rect x="340" y="360" width="120" height="100" fill="#0F2D2E" stroke="#34D399" stroke-width="2"/>
+  <rect x="365" y="310" width="70" height="50" fill="#143B3D" stroke="#38BDF8" stroke-width="1.5"/>
+  <circle cx="400" cy="335" r="14" fill="#34D399" fill-opacity="0.3" stroke="#F59E0B" stroke-width="2" filter="url(#glow)"/>
+
+  <!-- Neural Network Computational Grid Vectors (Autonomous Load Balancing) -->
+  <g stroke="#F59E0B" stroke-width="2" filter="url(#glow)" opacity="0.9">
+    <line x1="220" y1="240" x2="400" y2="335" stroke-dasharray="6 4"/>
+    <line x1="580" y1="210" x2="400" y2="335" stroke-dasharray="6 4"/>
+    <line x1="400" y1="335" x2="160" y2="480" stroke="#34D399"/>
+    <line x1="400" y1="335" x2="640" y2="490" stroke="#34D399"/>
+  </g>
+
+  <!-- Glowing AI Node Sensors -->
+  <circle cx="400" cy="335" r="6" fill="#F8FAFC"/>
+  <circle cx="220" cy="240" r="5" fill="#38BDF8"/>
+  <circle cx="580" cy="210" r="5" fill="#38BDF8"/>
+  <circle cx="160" cy="480" r="6" fill="#10B981"/>
+  <circle cx="640" cy="490" r="6" fill="#10B981"/>
+
+  <!-- Smart Grid HUD Display Top Right -->
+  <g fill="#061C1F" fill-opacity="0.85" stroke="#144A4C" stroke-width="1">
+    <rect x="490" y="40" width="250" height="90" rx="5"/>
+    <text x="510" y="65" fill="#34D399" font-family="monospace" font-size="11" letter-spacing="1">AUTONOMOUS CLIMATE GRID</text>
+    <text x="510" y="85" fill="#F8FAFC" font-family="monospace" font-size="12">CURTAILMENT: -96.2%</text>
+    <text x="510" y="105" fill="#94A3B8" font-family="monospace" font-size="10">CO₂ SEQUESTRATION: 420 Mt/yr</text>
+  </g>
+
+  <text x="60" y="565" fill="#94A3B8" font-family="monospace" font-size="12" letter-spacing="2">FIG 02 · AI FOR CLIMATE CHANGE &amp; AUTONOMOUS ENERGY GRIDS · 17.5 KB</text>
+</svg>

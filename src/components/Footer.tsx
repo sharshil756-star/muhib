@@ -22,11 +22,8 @@ export const Footer: React.FC = () => {
               question-and-answer monographs.
             </p>
             <div className="pt-2 flex flex-wrap gap-4 text-xs font-medium text-[#9A3412]">
-              <Link to="/seo-keyword-research" className="hover:underline">
-                Step 2: Keyword Research Table
-              </Link>
               <Link to="/future-ai-simulator" className="hover:underline">
-                2035 AI Impact Simulator App
+                Launch 2035 AI Impact Simulator App →
               </Link>
             </div>
           </div>
