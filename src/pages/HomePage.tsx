@@ -133,19 +133,22 @@ export const HomePage: React.FC = () => {
 
       {/* Tier 2: Core 3 Articles Highlight (Step 1, Step 2 & Step 3 Primary Pillar Showcase) */}
       <section className="max-w-[1320px] mx-auto px-6 py-14 border-b border-stone-200">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-          <div>
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
+          <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-widest text-[#9A3412] font-semibold">
               Curated Pillar Monographs · Core 3 Research Studies
             </p>
             <h2 className="font-editorial text-3xl sm:text-4xl font-semibold text-stone-900 mt-1 text-balance">
               Which Three AI Frontiers Will Reshape Civilization First?
             </h2>
+            <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-3">
+              <strong className="text-[#9A3412] font-semibold">Direct Answer:</strong> The three AI frontiers that will reshape civilization first are predictive genomics and diagnostics in biomedicine, autonomous grid balancing in planetary climate systems, and force-sensitive collaborative robotics in human artisan ateliers. These three physical domains deliver immediate societal impact between 2026 and 2030 by identifying pre-symptomatic cellular disease 4.5 years earlier, preventing continental electrical blackout cascades, and augmenting human master craftsmanship.
+            </p>
           </div>
-          <p className="text-sm text-stone-600 max-w-md">
-            Each pillar article features a unique URL slug, primary and related keyword triad,
-            optimized meta tags, compact imagery with descriptive alt text, and AEO question-answer subheadings.
-          </p>
+          <div className="p-4 bg-[#F3EFE6] border border-stone-300 text-xs text-stone-700 max-w-sm shrink-0">
+            <strong className="text-stone-900 block font-semibold mb-1">AEO Structure Standard:</strong>
+            Every research monograph below pairs a natural-language question H2 with an immediate direct answer, longitudinal 2035 forecast benchmarks, and peer-reviewed citations.
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -223,28 +226,34 @@ export const HomePage: React.FC = () => {
 
       {/* Tier 3: Complete 10-Article Blog Archive */}
       <section id="all-articles" className="max-w-[1320px] mx-auto px-6 py-14 border-b border-stone-200">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8">
-          <div>
-            <p className="text-xs uppercase tracking-widest text-stone-500 font-semibold">
-              Complete Editorial Archive · 10 Research Monographs
-            </p>
-            <h2 className="font-editorial text-3xl sm:text-4xl font-semibold text-stone-900 mt-1">
-              How Will Next-Generation AI Technology Transform Ten Essential Domains?
-            </h2>
+        <div className="space-y-4 mb-8">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div>
+              <p className="text-xs uppercase tracking-widest text-stone-500 font-semibold">
+                Complete Editorial Archive · 10 Research Monographs
+              </p>
+              <h2 className="font-editorial text-3xl sm:text-4xl font-semibold text-stone-900 mt-1">
+                How Will Next-Generation AI Technology Transform Ten Essential Domains?
+              </h2>
+            </div>
+
+            {/* Search input */}
+            <div className="relative w-full lg:w-80">
+              <Search className="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+              <input
+                type="search"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search 10 articles or keywords..."
+                aria-label="Search 10 articles or keywords"
+                className="w-full pl-10 pr-4 py-2 text-xs bg-white border border-stone-300 rounded-lg text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-stone-900"
+              />
+            </div>
           </div>
 
-          {/* Search input */}
-          <div className="relative w-full lg:w-80">
-            <Search className="w-4 h-4 text-stone-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-            <input
-              type="search"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search 10 articles or keywords..."
-              aria-label="Search 10 articles or keywords"
-              className="w-full pl-10 pr-4 py-2 text-xs bg-white border border-stone-300 rounded-lg text-stone-900 placeholder:text-stone-400 focus:outline-none focus:border-stone-900"
-            />
-          </div>
+          <p className="text-sm sm:text-base text-stone-700 max-w-4xl leading-relaxed">
+            <strong className="text-[#9A3412] font-semibold">Direct Answer:</strong> Next-generation AI technology transforms ten essential domains by superseding brittle probabilistic text prediction with verified physical world models, neuromorphic silicon, and neuro-symbolic reasoning. Across biomedicine, clean energy, industrial fabrication, personalized pedagogy, and planetary sensing, AI systems will autonomously optimize complex closed-loop processes while adhering to verifiable human safety constraints.
+          </p>
         </div>
 
         {/* Interactive Category Filter Controls */}
@@ -366,23 +375,29 @@ export const HomePage: React.FC = () => {
                 Answer Engine Optimization (AEO) · Homepage Q&amp;A
               </p>
               <h2 className="font-editorial text-3xl sm:text-4xl font-semibold text-stone-900 mt-1">
-                Frequently Asked Questions on the Future Use of AI
+                What Are the Most Critical Questions and Answers on the Future Use of AI?
               </h2>
+              <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-3">
+                <strong className="text-[#9A3412] font-semibold">Direct Overview: </strong>
+                Inquiring into the future use of AI reveals a decisive transition from centralized cloud chatbots to embodied edge computing, self-healing climate grids, and mathematically verified alignment frameworks. Below, our editorial research board synthesizes empirical answers to the primary queries driving 2026–2035 technological foresight.
+              </p>
             </div>
 
             <div className="space-y-8 divide-y divide-stone-200">
               {HOMEPAGE_AEO_FAQS.map((faq, idx) => (
-                <div key={idx} className={idx > 0 ? 'pt-8' : ''}>
+                <div key={idx} className={idx > 0 ? 'pt-8 space-y-3' : 'space-y-3'}>
                   <h3 className="font-editorial text-2xl font-semibold text-stone-900">
                     {faq.question}
                   </h3>
-                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed mt-3">
+                  <div className="p-4 bg-white border-l-4 border-[#9A3412] border-y border-r border-stone-200 text-sm sm:text-base text-stone-800 leading-relaxed">
+                    <strong className="text-[#9A3412] font-semibold">Answer: </strong>
                     {faq.answer}
-                  </p>
-                  <p className="text-xs text-stone-600 mt-3">
+                  </div>
+                  <p className="text-xs text-stone-600">
                     Further empirical reading:{' '}
                     <Link
                       to={faq.relatedLinkUrl}
+                      aria-label={`Read research to ${faq.relatedLinkAnchor}`}
                       className="font-semibold text-[#9A3412] underline underline-offset-4 hover:text-stone-900"
                     >
                       {faq.relatedLinkAnchor}
@@ -406,9 +421,8 @@ export const HomePage: React.FC = () => {
             </h3>
 
             <p className="text-sm text-stone-700 leading-relaxed">
-              Use our interactive <strong>2035 AI Impact Simulator &amp; Custom Monograph Synthesis App</strong>{' '}
-              to test compute efficiency, regulatory audit strictness, and R&amp;D investment across
-              healthcare, climate grids, robotics, and education.
+              <strong className="text-[#9A3412] font-semibold">Answer: </strong>
+              By configuring multi-variable scenario parameters across hardware efficiency, regulatory audit governance, and investment cycles. Our interactive <strong>2035 AI Impact Simulator &amp; Custom Monograph Synthesis App</strong> dynamically calculates projected productivity multipliers, decarbonization metrics, and clinical discovery velocity across all 10 strategic domains.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-2 border-t border-stone-300/80 font-mono-tabular text-xs">

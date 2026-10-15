@@ -167,26 +167,32 @@ export const ArticleDetailPage: React.FC = () => {
                   {section.questionH2}
                 </h2>
 
-                {/* Direct Answer Paragraph for Answer Engine Optimization */}
-                <p
-                  className={`text-base sm:text-[17px] text-stone-900 font-medium leading-[1.8] max-w-[68ch] ${
-                    idx === 0
-                      ? 'first-letter:text-5xl first-letter:font-editorial first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:mt-1 first-letter:text-[#9A3412]'
-                      : ''
-                  }`}
-                >
-                  {section.directAnswerParagraph}
-                </p>
+                {/* Direct Answer Paragraph formatted explicitly for AEO extraction */}
+                <div className="p-5 bg-[#F7F4EE] border-l-4 border-[#9A3412] border-y border-r border-stone-200 space-y-1.5 max-w-[68ch]">
+                  <div className="text-xs font-mono-tabular uppercase font-semibold text-[#9A3412] tracking-wider flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-[#9A3412]" aria-hidden="true"></span>
+                    <span>Direct Empirical Answer (AEO Summary)</span>
+                  </div>
+                  <p className="text-base sm:text-[17px] text-stone-900 font-medium leading-[1.8]">
+                    <strong className="text-stone-900 font-semibold">Answer: </strong>
+                    {section.directAnswerParagraph}
+                  </p>
+                </div>
 
                 {/* Deep-Dive Long-Form Paragraphs */}
-                {section.deepDiveParagraphs.map((para, pIdx) => (
-                  <p
-                    key={pIdx}
-                    className="text-base text-stone-700 leading-[1.8] max-w-[68ch]"
-                  >
-                    {para}
-                  </p>
-                ))}
+                <div className="space-y-4 pt-1">
+                  <div className="text-xs font-mono-tabular uppercase text-stone-500 tracking-wider">
+                    Longitudinal Analysis &amp; Empirical Findings
+                  </div>
+                  {section.deepDiveParagraphs.map((para, pIdx) => (
+                    <p
+                      key={pIdx}
+                      className="text-base text-stone-700 leading-[1.8] max-w-[68ch]"
+                    >
+                      {para}
+                    </p>
+                  ))}
+                </div>
 
                 {/* Contextual Internal Link with Descriptive Keyword-Rich Anchor Text */}
                 <p className="text-base text-stone-700 leading-[1.8] max-w-[68ch]">
