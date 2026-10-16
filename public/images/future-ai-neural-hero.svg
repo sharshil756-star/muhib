@@ -1,115 +1,169 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <radialGradient id="neuralGlow" cx="50%" cy="45%" r="65%">
-      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.35"/>
-      <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.12"/>
-      <stop offset="70%" stop-color="#0F172A" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#090D16" stop-opacity="1"/>
+    <!-- Background Radial Gradients -->
+    <radialGradient id="heroAtmosphere" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.32"/>
+      <stop offset="35%" stop-color="#38BDF8" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#0F172A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#060911" stop-opacity="1"/>
     </radialGradient>
-    <linearGradient id="cyanGold" x1="0%" y1="0%" x2="100%" y2="100%">
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FDE047" stop-opacity="1"/>
+      <stop offset="25%" stop-color="#F59E0B" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#9A3412" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0C0A09" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="beamVertical" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#0284C7" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="synapseLineGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38BDF8"/>
       <stop offset="50%" stop-color="#818CF8"/>
       <stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
-    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+
+    <!-- Refined Bloom & Glow Filters -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
       <feGaussianBlur stdDeviation="8" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
+    <filter id="highBloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="16" result="blur2"/>
+      <feGaussianBlur stdDeviation="6" result="blur1"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
 
-  <!-- Deep Canvas Background -->
-  <rect width="1280" height="720" fill="#070A11"/>
-  <rect width="1280" height="720" fill="url(#neuralGlow)"/>
+  <!-- Deep Obsidian Architecture Canvas -->
+  <rect width="1600" height="900" fill="#060911"/>
+  <rect width="1600" height="900" fill="url(#heroAtmosphere)"/>
 
-  <!-- Perspective Floor Grid (Future Research Pavilion) -->
+  <!-- Architectural Pavilion Perspective Grid (Research Core) -->
   <g stroke="#1E293B" stroke-width="1" opacity="0.65">
-    <line x1="640" y1="420" x2="-200" y2="720"/>
-    <line x1="640" y1="420" x2="60" y2="720"/>
-    <line x1="640" y1="420" x2="280" y2="720"/>
-    <line x1="640" y1="420" x2="480" y2="720"/>
-    <line x1="640" y1="420" x2="640" y2="720"/>
-    <line x1="640" y1="420" x2="800" y2="720"/>
-    <line x1="640" y1="420" x2="1000" y2="720"/>
-    <line x1="640" y1="420" x2="1220" y2="720"/>
-    <line x1="640" y1="420" x2="1480" y2="720"/>
-    <line x1="0" y1="480" x2="1280" y2="480"/>
-    <line x1="0" y1="540" x2="1280" y2="540"/>
-    <line x1="0" y1="610" x2="1280" y2="610"/>
-    <line x1="0" y1="680" x2="1280" y2="680"/>
+    <!-- Vanishing Point Lines toward center-horizon (800, 480) -->
+    <line x1="800" y1="480" x2="-200" y2="900"/>
+    <line x1="800" y1="480" x2="80" y2="900"/>
+    <line x1="800" y1="480" x2="360" y2="900"/>
+    <line x1="800" y1="480" x2="620" y2="900"/>
+    <line x1="800" y1="480" x2="800" y2="900"/>
+    <line x1="800" y1="480" x2="980" y2="900"/>
+    <line x1="800" y1="480" x2="1240" y2="900"/>
+    <line x1="800" y1="480" x2="1520" y2="900"/>
+    <line x1="800" y1="480" x2="1800" y2="900"/>
+    <!-- Transverse Floor Lines -->
+    <line x1="0" y1="550" x2="1600" y2="550"/>
+    <line x1="0" y1="620" x2="1600" y2="620"/>
+    <line x1="0" y1="700" x2="1600" y2="700"/>
+    <line x1="0" y1="790" x2="1600" y2="790"/>
+    <line x1="0" y1="890" x2="1600" y2="890"/>
   </g>
 
-  <!-- Quantum AI Luminous Core (Spherical Neural Hologram) -->
-  <circle cx="640" cy="310" r="190" fill="#0B132B" stroke="#0284C7" stroke-width="1.5" opacity="0.4"/>
-  <circle cx="640" cy="310" r="160" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.8"/>
-  <circle cx="640" cy="310" r="115" fill="none" stroke="#F59E0B" stroke-width="2" stroke-dasharray="14 10" filter="url(#glowEffect)"/>
-
-  <!-- Orbital Synapse Rings -->
-  <ellipse cx="640" cy="310" rx="260" ry="85" fill="none" stroke="#38BDF8" stroke-width="1.5" transform="rotate(-15 640 310)" opacity="0.75"/>
-  <ellipse cx="640" cy="310" rx="260" ry="85" fill="none" stroke="#F97316" stroke-width="1.5" stroke-dasharray="10 8" transform="rotate(25 640 310)" opacity="0.8"/>
-  <ellipse cx="640" cy="310" rx="280" ry="95" fill="none" stroke="#A78BFA" stroke-width="1.2" transform="rotate(70 640 310)" opacity="0.6"/>
-
-  <!-- Neural Nodes & Synaptic Vectors -->
-  <g stroke="url(#cyanGold)" stroke-width="1.5" opacity="0.85">
-    <line x1="640" y1="310" x2="520" y2="230"/>
-    <line x1="640" y1="310" x2="760" y2="220"/>
-    <line x1="640" y1="310" x2="480" y2="340"/>
-    <line x1="640" y1="310" x2="800" y2="330"/>
-    <line x1="640" y1="310" x2="570" y2="400"/>
-    <line x1="640" y1="310" x2="710" y2="400"/>
-    <line x1="520" y1="230" x2="430" y2="180"/>
-    <line x1="760" y1="220" x2="860" y2="170"/>
-    <line x1="480" y1="340" x2="380" y2="360"/>
-    <line x1="800" y1="330" x2="910" y2="350"/>
+  <!-- Vertical Optical Computing Columns (Fluted Architecture) -->
+  <g opacity="0.5">
+    <rect x="140" y="80" width="40" height="580" fill="#0E1626" stroke="#1E293B"/>
+    <rect x="220" y="140" width="30" height="500" fill="#0E1626" stroke="#1E293B"/>
+    <rect x="1350" y="140" width="30" height="500" fill="#0E1626" stroke="#1E293B"/>
+    <rect x="1420" y="80" width="40" height="580" fill="#0E1626" stroke="#1E293B"/>
   </g>
 
-  <!-- Glowing Synapse Particles -->
-  <circle cx="640" cy="310" r="14" fill="#F8FAFC" filter="url(#glowEffect)"/>
-  <circle cx="520" cy="230" r="8" fill="#38BDF8" filter="url(#glowEffect)"/>
-  <circle cx="760" cy="220" r="8" fill="#F59E0B" filter="url(#glowEffect)"/>
-  <circle cx="480" cy="340" r="7" fill="#818CF8"/>
-  <circle cx="800" cy="330" r="7" fill="#38BDF8"/>
-  <circle cx="430" cy="180" r="5" fill="#38BDF8"/>
-  <circle cx="860" cy="170" r="5" fill="#F59E0B"/>
-  <circle cx="380" cy="360" r="5" fill="#A78BFA"/>
-  <circle cx="910" cy="350" r="5" fill="#38BDF8"/>
-  <circle cx="570" cy="400" r="6" fill="#F97316"/>
-  <circle cx="710" cy="400" r="6" fill="#38BDF8"/>
+  <!-- Central Planetary AI Holographic Core (Spherical Neural Model) -->
+  <g transform="translate(800, 360)">
+    <!-- Ambient Halo -->
+    <circle cx="0" cy="0" r="230" fill="url(#coreGlow)" opacity="0.45"/>
+    
+    <!-- Outer Equatorial and Polar Astrolabe Rings -->
+    <circle cx="0" cy="0" r="220" fill="none" stroke="#0284C7" stroke-width="1.5" stroke-dasharray="6 8" opacity="0.6"/>
+    <circle cx="0" cy="0" r="185" fill="none" stroke="#38BDF8" stroke-width="2" stroke-dasharray="14 10" opacity="0.8"/>
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#F59E0B" stroke-width="1.8" filter="url(#softGlow)"/>
 
-  <!-- Vertical Data Hologram Beams -->
-  <rect x="637" y="60" width="6" height="520" fill="url(#beamGrad)" opacity="0.6"/>
-  <rect x="517" y="120" width="4" height="420" fill="url(#beamGrad)" opacity="0.35"/>
-  <rect x="758" y="110" width="4" height="430" fill="url(#beamGrad)" opacity="0.35"/>
+    <!-- Dynamic Orbital Latitudes -->
+    <ellipse cx="0" cy="0" rx="270" ry="85" fill="none" stroke="#38BDF8" stroke-width="2" transform="rotate(-18)" opacity="0.8" filter="url(#softGlow)"/>
+    <ellipse cx="0" cy="0" rx="270" ry="85" fill="none" stroke="#EA580C" stroke-width="1.8" stroke-dasharray="12 8" transform="rotate(24)" opacity="0.85"/>
+    <ellipse cx="0" cy="0" rx="290" ry="100" fill="none" stroke="#A78BFA" stroke-width="1.4" transform="rotate(72)" opacity="0.65"/>
 
-  <!-- Human Researchers Silhouettes at Workstations (Foreground Presence) -->
-  <g fill="#0E1626">
-    <!-- Left Scientist -->
-    <path d="M 330 630 C 330 575, 345 550, 365 540 C 355 530, 355 515, 365 505 C 375 495, 395 495, 405 505 C 415 515, 415 530, 405 540 C 425 550, 440 575, 440 630 Z"/>
-    <!-- Right Scientist -->
-    <path d="M 840 630 C 840 575, 855 550, 875 540 C 865 530, 865 515, 875 505 C 885 495, 905 495, 915 505 C 925 515, 925 530, 915 540 C 935 550, 950 575, 950 630 Z"/>
+    <!-- Central Fusion / Synaptic Singularity -->
+    <circle cx="0" cy="0" r="22" fill="#FFFFFF" filter="url(#highBloom)"/>
+    <circle cx="0" cy="0" r="10" fill="#FDE047"/>
+
+    <!-- Radiating Domain Nodes (The 10 Research Frontiers) -->
+    <!-- 01 Biomedicine -->
+    <line x1="0" y1="0" x2="-160" y2="-120" stroke="url(#synapseLineGrad)" stroke-width="1.5"/>
+    <circle cx="-160" cy="-120" r="9" fill="#0284C7" stroke="#38BDF8" stroke-width="2" filter="url(#softGlow)"/>
+    <text x="-240" y="-135" fill="#38BDF8" font-family="monospace" font-size="11" letter-spacing="1">01·BIOMEDICINE</text>
+
+    <!-- 02 Climate Grids -->
+    <line x1="0" y1="0" x2="170" y2="-110" stroke="url(#synapseLineGrad)" stroke-width="1.5"/>
+    <circle cx="170" cy="-110" r="9" fill="#059669" stroke="#34D399" stroke-width="2" filter="url(#softGlow)"/>
+    <text x="185" y="-125" fill="#34D399" font-family="monospace" font-size="11" letter-spacing="1">02·CLIMATE GRIDS</text>
+
+    <!-- 03 Robotics -->
+    <line x1="0" y1="0" x2="-220" y2="10" stroke="url(#synapseLineGrad)" stroke-width="1.5"/>
+    <circle cx="-220" cy="10" r="9" fill="#EA580C" stroke="#FB923C" stroke-width="2" filter="url(#softGlow)"/>
+    <text x="-310" y="15" fill="#FB923C" font-family="monospace" font-size="11" letter-spacing="1">03·ROBOTICS</text>
+
+    <!-- 04 Education -->
+    <line x1="0" y1="0" x2="230" y2="20" stroke="url(#synapseLineGrad)" stroke-width="1.5"/>
+    <circle cx="230" cy="20" r="9" fill="#6366F1" stroke="#818CF8" stroke-width="2" filter="url(#softGlow)"/>
+    <text x="245" y="25" fill="#818CF8" font-family="monospace" font-size="11" letter-spacing="1">04·COGNITIVE</text>
+
+    <!-- 05 Quantum Discovery -->
+    <line x1="0" y1="0" x2="-140" y2="140" stroke="url(#synapseLineGrad)" stroke-width="1.5"/>
+    <circle cx="-140" cy="140" r="9" fill="#0D9488" stroke="#2DD4BF" stroke-width="2" filter="url(#softGlow)"/>
+    <text x="-230" y="160" fill="#2DD4BF" font-family="monospace" font-size="11" letter-spacing="1">05·QUANTUM</text>
+
+    <!-- 06 Agriculture -->
+    <line x1="0" y1="0" x2="150" y2="135" stroke="url(#synapseLineGrad)" stroke-width="1.5"/>
+    <circle cx="150" cy="135" r="9" fill="#16A34A" stroke="#4ADE80" stroke-width="2" filter="url(#softGlow)"/>
+    <text x="165" y="155" fill="#4ADE80" font-family="monospace" font-size="11" letter-spacing="1">06·AGRO-ECOLOGY</text>
+
+    <!-- 07 Deep Space -->
+    <line x1="0" y1="0" x2="0" y2="-190" stroke="url(#synapseLineGrad)" stroke-width="1.5"/>
+    <circle cx="0" cy="-190" r="9" fill="#3B82F6" stroke="#93C5FD" stroke-width="2" filter="url(#softGlow)"/>
+    <text x="15" y="-195" fill="#93C5FD" font-family="monospace" font-size="11" letter-spacing="1">07·DEEP SPACE</text>
+
+    <!-- Vertical Luminescent Data Light Column -->
+    <rect x="-4" y="-300" width="8" height="600" fill="url(#beamVertical)" opacity="0.7"/>
   </g>
 
-  <!-- Holographic Floating HUD Displays in front of researchers -->
-  <g fill="none" stroke="#38BDF8" stroke-width="1.2" opacity="0.85">
-    <!-- Left HUD -->
-    <rect x="340" y="470" width="130" height="70" rx="4" fill="#0B132B" fill-opacity="0.75" stroke="#38BDF8"/>
-    <line x1="355" y1="485" x2="420" y2="485"/>
-    <line x1="355" y1="495" x2="450" y2="495"/>
-    <line x1="355" y1="505" x2="410" y2="505"/>
-    <circle cx="445" cy="520" r="10" stroke="#F59E0B"/>
-    <!-- Right HUD -->
-    <rect x="810" y="470" width="140" height="70" rx="4" fill="#0B132B" fill-opacity="0.75" stroke="#38BDF8"/>
-    <path d="M 825 520 L 845 500 L 865 515 L 890 485 L 920 510" stroke="#F59E0B" stroke-width="1.5"/>
-    <line x1="825" y1="485" x2="880" y2="485"/>
+  <!-- Foreground Human Researchers Silhouettes & Holographic Consoles -->
+  <!-- Left Research Station -->
+  <g transform="translate(380, 570)">
+    <path d="M 50 140 C 50 80, 65 50, 90 40 C 75 30, 75 10, 90 -5 C 105 -20, 130 -20, 145 -5 C 160 10, 160 30, 145 40 C 170 50, 185 80, 185 140 Z" fill="#0B132B"/>
+    <!-- Floating Console Display -->
+    <rect x="-10" y="10" width="180" height="90" rx="6" fill="#0A101D" fill-opacity="0.85" stroke="#38BDF8" stroke-width="1.5" filter="url(#softGlow)"/>
+    <text x="8" y="32" fill="#38BDF8" font-family="monospace" font-size="10" letter-spacing="1">REAL-TIME FORESIGHT</text>
+    <polyline points="10,75 35,50 60,65 90,38 120,55 155,30" fill="none" stroke="#F59E0B" stroke-width="2"/>
+    <circle cx="155" cy="30" r="3.5" fill="#FDE047"/>
   </g>
 
-  <!-- Technical Telemetry Typography -->
-  <text x="60" y="80" fill="#94A3B8" font-family="monospace" font-size="13" letter-spacing="3">HORIZON 2035 · AUTONOMOUS NEURAL WORLD MODEL · AETHELGARD CORE</text>
-  <text x="60" y="105" fill="#38BDF8" font-family="monospace" font-size="11" letter-spacing="1.5">GLOBAL SYNAPSE TOPOLOGY: ONLINE · 10 DOMAINS FEDERATED</text>
+  <!-- Right Research Station -->
+  <g transform="translate(1040, 570)">
+    <path d="M 50 140 C 50 80, 65 50, 90 40 C 75 30, 75 10, 90 -5 C 105 -20, 130 -20, 145 -5 C 160 10, 160 30, 145 40 C 170 50, 185 80, 185 140 Z" fill="#0B132B"/>
+    <!-- Floating Console Display -->
+    <rect x="30" y="10" width="180" height="90" rx="6" fill="#0A101D" fill-opacity="0.85" stroke="#38BDF8" stroke-width="1.5" filter="url(#softGlow)"/>
+    <text x="48" y="32" fill="#38BDF8" font-family="monospace" font-size="10" letter-spacing="1">SYNAPSE TOPOLOGY: 100%</text>
+    <rect x="48" y="46" width="140" height="8" rx="2" fill="#1E293B"/>
+    <rect x="48" y="46" width="118" height="8" rx="2" fill="#10B981"/>
+    <text x="48" y="74" fill="#94A3B8" font-family="monospace" font-size="9">CAUSAL ENGINE: ACTIVE</text>
+  </g>
+
+  <!-- Editorial Aesthetic Frame & Telemetry Headers -->
+  <g font-family="monospace" fill="#94A3B8" font-size="12" letter-spacing="2" opacity="0.85">
+    <text x="60" y="70">AETHELGARD RESEARCH ATLAS · HORIZON 2026–2035</text>
+    <text x="60" y="94" fill="#38BDF8" font-size="10">CORE FIGURE 00 · AUTONOMOUS NEURAL WORLD MODEL SIMULATOR</text>
+    <text x="1220" y="70" text-anchor="start">LAT 47°33'N · BAS-01 CORE</text>
+    <text x="1220" y="94" text-anchor="start" fill="#F59E0B" font-size="10">STATUS: CONVERGED (AEO OPTIMIZED)</text>
+  </g>
+
+  <!-- Clean Precision Outer Border -->
+  <rect x="20" y="20" width="1560" height="860" fill="none" stroke="#1E293B" stroke-width="1" opacity="0.7"/>
 </svg>

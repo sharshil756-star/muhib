@@ -1,21 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <radialGradient id="cityGlow" cx="50%" cy="50%" r="65%">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.8"/>
-      <stop offset="50%" stop-color="#0F172A" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#020617" stop-opacity="1"/>
+    <radialGradient id="cityAtmosphere" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#0284C7" stop-opacity="0.3"/>
+      <stop offset="45%" stop-color="#0F172A" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#030712" stop-opacity="1"/>
     </radialGradient>
-    <linearGradient id="towerGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="timberTower" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#0369A1"/>
+      <stop offset="50%" stop-color="#0369A1"/>
+      <stop offset="100%" stop-color="#0C4A6E"/>
     </linearGradient>
-    <linearGradient id="transitBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="transitFlow" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#F59E0B"/>
       <stop offset="50%" stop-color="#EF4444"/>
       <stop offset="100%" stop-color="#F59E0B"/>
     </linearGradient>
     <filter id="cityBloom" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -23,86 +24,87 @@
     </filter>
   </defs>
 
-  <!-- Deep Canvas -->
-  <rect width="800" height="600" fill="#020617"/>
-  <rect width="800" height="600" fill="url(#cityGlow)"/>
+  <!-- Deep Urban Canvas -->
+  <rect width="1200" height="900" fill="#030712"/>
+  <rect width="1200" height="900" fill="url(#cityAtmosphere)"/>
 
-  <!-- Isometric Ground Grid -->
-  <g stroke="#1E293B" stroke-width="1" opacity="0.6">
-    <path d="M 400 250 L 760 450 L 400 580 L 40 450 Z" fill="#0B132B" opacity="0.4"/>
-    <line x1="400" y1="250" x2="400" y2="580"/>
-    <line x1="40" y1="450" x2="760" y2="450"/>
-    <line x1="160" y1="316" x2="520" y2="516"/>
-    <line x1="280" y1="383" x2="640" y2="583"/>
-    <line x1="640" y1="316" x2="280" y2="516"/>
-    <line x1="520" y1="383" x2="160" y2="583"/>
+  <!-- Isometric Ground Plane Grid (Digital Twin Mesh) -->
+  <g stroke="#1E293B" stroke-width="1.2" opacity="0.6">
+    <path d="M 600 340 L 1140 640 L 600 860 L 60 640 Z" fill="#0B132B" opacity="0.45"/>
+    <line x1="600" y1="340" x2="600" y2="860"/>
+    <line x1="60" y1="640" x2="1140" y2="640"/>
+    <!-- Diagonal Iso Lines -->
+    <line x1="240" y1="440" x2="780" y2="740"/>
+    <line x1="420" y1="540" x2="960" y2="840"/>
+    <line x1="960" y1="440" x2="420" y2="740"/>
+    <line x1="780" y1="540" x2="240" y2="840"/>
   </g>
 
-  <!-- Futuristic Skyscrapers & Digital Twin Towers (Isometric Prisms) -->
-  <!-- Tower Center-Left (Tallest) -->
-  <g transform="translate(320, 100)">
+  <!-- Futuristic Skyscrapers & Digital Twin Prisms (Isometric City Center) -->
+  <!-- Tower 1: Central Master Spire -->
+  <g transform="translate(600, 200)">
     <!-- Left Face -->
-    <polygon points="0,60 -60,95 -60,360 0,325" fill="#0F2537" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="0,0 -80,45 -80,380 0,335" fill="#0A2238" stroke="#38BDF8" stroke-width="1.5"/>
     <!-- Right Face -->
-    <polygon points="0,60 60,95 60,360 0,325" fill="#0C1D2C" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="0,0 80,45 80,380 0,335" fill="#061828" stroke="#38BDF8" stroke-width="1.5"/>
     <!-- Top Face -->
-    <polygon points="0,60 60,95 0,130 -60,95" fill="#38BDF8" opacity="0.8"/>
-    <!-- Luminous Windows / Activity Nodes -->
-    <g fill="#38BDF8" opacity="0.75" filter="url(#cityBloom)">
-      <circle cx="-30" cy="160" r="3"/>
-      <circle cx="-15" cy="180" r="3"/>
-      <circle cx="-40" cy="220" r="3"/>
-      <circle cx="30" cy="160" r="3"/>
-      <circle cx="45" cy="210" r="3"/>
-      <circle cx="20" cy="260" r="3"/>
+    <polygon points="0,0 80,45 0,90 -80,45" fill="#38BDF8" opacity="0.8"/>
+    <!-- Vertical Forest Terraces & Skygarden Balconies -->
+    <g fill="#10B981" opacity="0.85">
+      <rect x="-70" y="120" width="14" height="6" rx="2"/>
+      <rect x="-70" y="180" width="14" height="6" rx="2"/>
+      <rect x="-70" y="240" width="14" height="6" rx="2"/>
+      <rect x="56" y="120" width="14" height="6" rx="2"/>
+      <rect x="56" y="180" width="14" height="6" rx="2"/>
+      <rect x="56" y="240" width="14" height="6" rx="2"/>
     </g>
-    <!-- Spire -->
-    <line x1="0" y1="60" x2="0" y2="0" stroke="#38BDF8" stroke-width="2"/>
-    <circle cx="0" cy="0" r="4" fill="#F43F5E" filter="url(#cityBloom)"/>
+    <!-- Roof Antenna Communication Spire -->
+    <line x1="0" y1="0" x2="0" y2="-90" stroke="#38BDF8" stroke-width="3"/>
+    <circle cx="0" cy="-90" r="7" fill="#FDE047" filter="url(#cityBloom)"/>
   </g>
 
-  <!-- Tower Center-Right -->
-  <g transform="translate(480, 150)">
-    <polygon points="0,50 -50,80 -50,300 0,270" fill="#091A28" stroke="#0EA5E9" stroke-width="1.2"/>
-    <polygon points="0,50 50,80 50,300 0,270" fill="#06121C" stroke="#0EA5E9" stroke-width="1.2"/>
-    <polygon points="0,50 50,80 0,110 -50,80" fill="#0EA5E9" opacity="0.7"/>
-    <line x1="0" y1="50" x2="0" y2="10" stroke="#0EA5E9" stroke-width="2"/>
-    <circle cx="0" cy="10" r="3.5" fill="#F59E0B" filter="url(#cityBloom)"/>
+  <!-- Tower 2: West Biophilic High-Rise -->
+  <g transform="translate(420, 280)">
+    <polygon points="0,0 -60,35 -60,320 0,285" fill="#0A2238" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="0,0 60,35 60,320 0,285" fill="#061828" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="0,0 60,35 0,70 -60,35" fill="#0284C7" opacity="0.8"/>
   </g>
 
-  <!-- Tower Left (Medium) -->
-  <g transform="translate(180, 220)">
-    <polygon points="0,40 -40,65 -40,240 0,215" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
-    <polygon points="0,40 40,65 40,240 0,215" fill="#0B132B" stroke="#0284C7" stroke-width="1"/>
-    <polygon points="0,40 40,65 0,90 -40,65" fill="#0284C7" opacity="0.6"/>
+  <!-- Tower 3: East Technology Hub -->
+  <g transform="translate(780, 280)">
+    <polygon points="0,0 -60,35 -60,320 0,285" fill="#0A2238" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="0,0 60,35 60,320 0,285" fill="#061828" stroke="#38BDF8" stroke-width="1.2"/>
+    <polygon points="0,0 60,35 0,70 -60,35" fill="#0284C7" opacity="0.8"/>
   </g>
 
-  <!-- Tower Right (Forefront) -->
-  <g transform="translate(620, 240)">
-    <polygon points="0,40 -40,65 -40,220 0,195" fill="#0F172A" stroke="#0284C7" stroke-width="1"/>
-    <polygon points="0,40 40,65 40,220 0,195" fill="#0B132B" stroke="#0284C7" stroke-width="1"/>
-    <polygon points="0,40 40,65 0,90 -40,65" fill="#0284C7" opacity="0.6"/>
+  <!-- Skybridges Connecting Towers -->
+  <g stroke="#38BDF8" stroke-width="3" fill="#0F172A">
+    <path d="M 420 400 L 520 360 L 520 375 L 420 415 Z"/>
+    <path d="M 680 360 L 780 400 L 780 415 L 680 375 Z"/>
   </g>
 
-  <!-- Sky-Bridge Interconnect between Towers -->
-  <path d="M 320 230 L 480 250" stroke="#38BDF8" stroke-width="3" opacity="0.9"/>
-  <path d="M 320 234 L 480 254" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="4 4"/>
-
-  <!-- Autonomous EV & Transit Flow Corridors (Ground Neon Streaks) -->
-  <path d="M 120 480 L 400 370 L 680 490" fill="none" stroke="url(#transitBeam)" stroke-width="3" filter="url(#cityBloom)"/>
-  <path d="M 220 540 L 400 450 L 580 540" fill="none" stroke="#38BDF8" stroke-width="2.5" filter="url(#cityBloom)"/>
-
-  <!-- Holographic Urban Sensor Callouts -->
-  <g stroke="#34D399" stroke-width="1">
-    <line x1="480" y1="360" x2="560" y2="330"/>
-    <circle cx="560" cy="330" r="3" fill="#34D399"/>
+  <!-- Autonomous Micro-Transit Pulse Lines (Glowing Amber/Red Transit Tracks) -->
+  <g stroke="url(#transitFlow)" stroke-width="3" fill="none" filter="url(#cityBloom)">
+    <path d="M 160 580 Q 420 490, 600 580 T 1040 580"/>
+    <path d="M 320 700 Q 600 610, 880 700"/>
   </g>
-  <rect x="560" y="315" width="140" height="36" rx="4" fill="#0F172A" stroke="#10B981" stroke-width="1"/>
-  <text x="570" y="330" font-family="monospace" font-size="9" fill="#34D399">TRAFFIC GRID: -42% LATENCY</text>
-  <text x="570" y="343" font-family="monospace" font-size="9" fill="#A7F3D0">CO₂ SENSOR: NET-ZERO FLOW</text>
+  <!-- Moving Autonomous Shuttles (Data Packets) -->
+  <circle cx="480" cy="545" r="6" fill="#FDE047" filter="url(#cityBloom)"/>
+  <circle cx="720" cy="570" r="6" fill="#EF4444" filter="url(#cityBloom)"/>
+  <circle cx="600" cy="655" r="6" fill="#FDE047" filter="url(#cityBloom)"/>
 
-  <!-- Technical Headings -->
-  <text x="50" y="60" font-family="monospace" font-size="12" fill="#38BDF8" letter-spacing="2">SMART METROPOLIS DIGITAL TWIN // 2035</text>
-  <text x="50" y="80" font-family="monospace" font-size="10" fill="#94A3B8">CONTINUOUS VOLUMETRIC LIDAR &amp; REAL-TIME AUTONOMOUS MOBILITY</text>
-  <text x="750" y="570" font-family="monospace" font-size="11" fill="#38BDF8" text-anchor="end">CIVIC EFFICIENCY: +88% OPTIMIZATION INDEX</text>
+  <!-- Municipal Digital Twin Telemetry HUD -->
+  <g transform="translate(100, 160)">
+    <rect width="280" height="150" rx="6" fill="#071324" fill-opacity="0.85" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="16" y="24" fill="#38BDF8" font-family="monospace" font-size="10" letter-spacing="1">MUNICIPAL DIGITAL TWIN</text>
+    <text x="16" y="52" fill="#FDE047" font-family="monospace" font-size="13" font-weight="bold">TRANSIT CONGESTION: 0.0%</text>
+    <text x="16" y="76" fill="#94A3B8" font-family="monospace" font-size="9">STORMWATER BUFFER: 91% CAPACITY</text>
+    <text x="16" y="98" fill="#10B981" font-family="monospace" font-size="9">DISTRICT THERMAL EFFICIENCY: 98%</text>
+    <text x="16" y="122" fill="#38BDF8" font-family="monospace" font-size="9">DYNAMIC EV CHARGING: BALANCED</text>
+  </g>
+
+  <!-- Frame & Metadata -->
+  <text x="60" y="80" fill="#94A3B8" font-family="monospace" font-size="12" letter-spacing="2">MONOGRAPH 09 · FUTURE OF AI IN SMART CITIES &amp; DIGITAL TWINS</text>
+  <text x="60" y="105" fill="#38BDF8" font-family="monospace" font-size="10">FIG. 09 — MULTI-LAYER MUNICIPAL SIMULATION AND AUTONOMOUS TRANSIT HEADWAYS</text>
+  <rect x="20" y="20" width="1160" height="860" fill="none" stroke="#1E293B" stroke-width="1"/>
 </svg>

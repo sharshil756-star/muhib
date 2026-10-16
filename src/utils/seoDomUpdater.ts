@@ -39,6 +39,12 @@ export function updateDocumentSeoMeta(
     config.metaDescription
   );
 
+  const imageUrl = article
+    ? (article.image.src.startsWith('http') ? article.image.src : `${window.location.origin}${article.image.src}`)
+    : `${window.location.origin}/images/future-ai-neural-hero.svg`;
+  setMetaTag('meta[property="og:image"]', 'property', 'og:image', imageUrl);
+  setMetaTag('meta[name="twitter:image"]', 'name', 'twitter:image', imageUrl);
+
   // Update canonical URL dynamically
   const canonicalUrl = `${window.location.origin}${config.urlPath}`;
   let canonicalEl = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
@@ -72,7 +78,7 @@ export function updateDocumentSeoMeta(
                 name: article.author.institution,
               },
             },
-            image: article.image.src,
+            image: imageUrl,
             url: canonicalUrl,
           },
           {

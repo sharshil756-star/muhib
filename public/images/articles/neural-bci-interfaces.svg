@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <radialGradient id="bciGlow" cx="50%" cy="45%" r="65%">
-      <stop offset="0%" stop-color="#4C1D95" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#1E1035" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#080314" stop-opacity="1"/>
+    <radialGradient id="bciAtmosphere" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#4C1D95" stop-opacity="0.35"/>
+      <stop offset="45%" stop-color="#1E1035" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#090417" stop-opacity="1"/>
     </radialGradient>
-    <linearGradient id="neuralFlow" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="synapseGlowFlow" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#06B6D4"/>
       <stop offset="50%" stop-color="#A855F7"/>
       <stop offset="100%" stop-color="#F43F5E"/>
@@ -19,69 +19,83 @@
     </filter>
   </defs>
 
-  <!-- Deep Canvas -->
-  <rect width="800" height="600" fill="#080314"/>
-  <rect width="800" height="600" fill="url(#bciGlow)"/>
+  <!-- Deep Neuro-Violet Canvas -->
+  <rect width="1200" height="900" fill="#090417"/>
+  <rect width="1200" height="900" fill="url(#bciAtmosphere)"/>
 
-  <!-- Cranial & Cortex Profile Contour (Minimalist Cyber Aesthetic) -->
-  <path d="M 280 480 C 260 420, 220 380, 220 300 C 220 180, 310 100, 440 100 C 560 100, 640 190, 640 310 C 640 400, 580 470, 560 500" 
-        fill="none" stroke="#6D28D9" stroke-width="2" stroke-dasharray="8 6" opacity="0.6"/>
+  <!-- Cranial Silhouette & Cortical Contour (Center Left) -->
+  <g transform="translate(520, 460)">
+    <!-- Cerebral Outline -->
+    <path d="M -160 220 C -200 120, -240 60, -240 -60 C -240 -200, -120 -300, 40 -300 C 180 -300, 280 -180, 280 -40 C 280 80, 200 180, 160 240" 
+          fill="none" stroke="#6D28D9" stroke-width="2.5" stroke-dasharray="8 6" opacity="0.6"/>
 
-  <!-- High-Bandwidth Neural Mesh Lace (Over Cerebral Cortex) -->
-  <g stroke="url(#neuralFlow)" stroke-width="1.5" fill="none">
-    <!-- Synaptic Lattice Interconnects -->
-    <path d="M 320 200 Q 380 150, 460 180 T 580 230"/>
-    <path d="M 280 260 Q 360 210, 450 250 T 590 300"/>
-    <path d="M 260 320 Q 350 280, 440 320 T 570 380"/>
-    <path d="M 300 390 Q 390 350, 480 390 T 540 440"/>
+    <!-- High-Density Non-Invasive Neural Mesh Lace (Over Motor & Temporal Cortex) -->
+    <g stroke="url(#synapseGlowFlow)" stroke-width="2" fill="none">
+      <path d="M -100 -180 Q -20 -240, 80 -200 T 220 -120"/>
+      <path d="M -160 -100 Q -60 -160, 60 -110 T 240 -40"/>
+      <path d="M -180 -20 Q -80 -80, 40 -20 T 200 60"/>
+      <path d="M -140 80 Q -40 20, 80 80 T 160 160"/>
+      
+      <!-- Interconnecting Axon Dendrite Strands -->
+      <path d="M -80 -210 Q -70 -70, -100 80"/>
+      <path d="M 0 -230 Q 10 -60, 20 100"/>
+      <path d="M 80 -200 Q 110 -40, 90 120"/>
+      <path d="M 160 -160 Q 180 -20, 170 140"/>
+    </g>
+
+    <!-- Synaptic Electro-Optical Micro-Transducers (Glowing Action Potentials) -->
+    <g filter="url(#bciBloom)">
+      <circle cx="-20" cy="-180" r="8" fill="#06B6D4"/>
+      <circle cx="80" cy="-170" r="9" fill="#A855F7"/>
+      <circle cx="-60" cy="-70" r="7" fill="#F43F5E"/>
+      <circle cx="40" cy="-80" r="10" fill="#06B6D4"/>
+      <circle cx="140" cy="-60" r="8" fill="#A855F7"/>
+      <circle cx="-70" cy="40" r="8" fill="#A855F7"/>
+      <circle cx="30" cy="30" r="9" fill="#F43F5E"/>
+      <circle cx="120" cy="50" r="7" fill="#06B6D4"/>
+    </g>
+
+    <!-- Non-Invasive Functional Ultrasound Transducer Headband -->
+    <path d="M -220 -130 C -80 -220, 100 -220, 260 -130" fill="none" stroke="#F59E0B" stroke-width="4" filter="url(#bciBloom)"/>
+    <circle cx="-220" cy="-130" r="8" fill="#F59E0B"/>
+    <circle cx="-80" cy="-190" r="7" fill="#FDE047"/>
+    <circle cx="100" cy="-190" r="7" fill="#FDE047"/>
+    <circle cx="260" cy="-130" r="8" fill="#F59E0B"/>
+  </g>
+
+  <!-- Right Scientific Panel: Real-Time Decoded Phoneme Speech Stream -->
+  <g transform="translate(820, 180)">
+    <rect width="280" height="380" rx="8" fill="#150B28" fill-opacity="0.9" stroke="#A855F7" stroke-width="1.5"/>
+    <text x="16" y="28" fill="#C084FC" font-family="monospace" font-size="10" letter-spacing="1">DECODED SPEECH SYNTHESIS</text>
     
-    <!-- Vertical Dendritic Axons -->
-    <path d="M 340 170 Q 350 270, 330 380"/>
-    <path d="M 400 155 Q 410 280, 420 400"/>
-    <path d="M 460 170 Q 480 290, 470 410"/>
-    <path d="M 520 200 Q 530 300, 530 420"/>
+    <!-- Real-time Audio Phoneme Waveform -->
+    <g transform="translate(16, 70)" stroke="#38BDF8" stroke-width="2" fill="none" filter="url(#bciBloom)">
+      <path d="M 0 30 Q 20 0, 40 30 T 80 30 T 120 5 T 160 55 T 200 30 T 240 30"/>
+    </g>
+
+    <!-- Decoded Linguistic Intent Card -->
+    <rect x="16" y="140" width="248" height="90" rx="6" fill="#20113B" stroke="#6D28D9"/>
+    <text x="26" y="165" fill="#94A3B8" font-family="monospace" font-size="9">SYNTHESIZED INTENT (0.012s LATENCY):</text>
+    <text x="26" y="195" fill="#FDE047" font-family="serif" font-size="16" font-style="italic">"Restoring natural conversational flow."</text>
+    
+    <text x="16" y="270" fill="#94A3B8" font-family="monospace" font-size="9">DECODING SPEED: 115 WORDS/MIN</text>
+    <text x="16" y="295" fill="#10B981" font-family="monospace" font-size="9">VOCABULARY SIZE: 125,000 TOKENS</text>
+    <text x="16" y="320" fill="#38BDF8" font-family="monospace" font-size="9">MOTOR REHABILITATION: ACTIVE</text>
+    <text x="16" y="345" fill="#F43F5E" font-family="monospace" font-size="9">SPATIAL RESOLUTION: 0.1 mm (fUS)</text>
   </g>
 
-  <!-- Synaptic Nodes with Glowing Action Potentials -->
-  <g filter="url(#bciBloom)">
-    <circle cx="380" cy="190" r="7" fill="#06B6D4"/>
-    <circle cx="460" cy="180" r="8" fill="#A855F7"/>
-    <circle cx="360" cy="270" r="6" fill="#F43F5E"/>
-    <circle cx="440" cy="260" r="9" fill="#06B6D4"/>
-    <circle cx="520" cy="280" r="7" fill="#A855F7"/>
-    <circle cx="350" cy="350" r="7" fill="#A855F7"/>
-    <circle cx="430" cy="340" r="8" fill="#F43F5E"/>
-    <circle cx="500" cy="360" r="6" fill="#06B6D4"/>
+  <!-- Left Scientific Panel: Magneto-Optical Signal Waveform -->
+  <g transform="translate(100, 180)">
+    <rect width="260" height="240" rx="8" fill="#150B28" fill-opacity="0.9" stroke="#6D28D9" stroke-width="1.5"/>
+    <text x="16" y="28" fill="#A855F7" font-family="monospace" font-size="10" letter-spacing="1">CORTICAL VOLTAGE (μV)</text>
+    <polyline points="20,100 50,70 80,120 110,60 140,110 170,80 200,100 230,65" fill="none" stroke="#FDE047" stroke-width="2" filter="url(#bciBloom)"/>
+    <text x="16" y="160" fill="#94A3B8" font-family="monospace" font-size="9">GAMMA SYNCHRONY: 42 Hz</text>
+    <text x="16" y="185" fill="#38BDF8" font-family="monospace" font-size="9">SIGNAL-TO-NOISE: 34 dB</text>
+    <text x="16" y="210" fill="#10B981" font-family="monospace" font-size="9">OPTODE POWER: 2.4 mW (EYE-SAFE)</text>
   </g>
 
-  <!-- External Non-Invasive Transducer Crown Band -->
-  <path d="M 230 240 C 340 180, 480 180, 610 240" fill="none" stroke="#F59E0B" stroke-width="3" filter="url(#bciBloom)"/>
-  <circle cx="230" cy="240" r="6" fill="#F59E0B"/>
-  <circle cx="330" cy="205" r="5" fill="#F59E0B"/>
-  <circle cx="430" cy="195" r="5" fill="#F59E0B"/>
-  <circle cx="530" cy="205" r="5" fill="#F59E0B"/>
-  <circle cx="610" cy="240" r="6" fill="#F59E0B"/>
-
-  <!-- High-Bandwidth Data Burst Stream (Ascending to Cloud Atlas) -->
-  <g stroke="#38BDF8" stroke-width="1.2" stroke-dasharray="4 4" opacity="0.8">
-    <line x1="440" y1="180" x2="440" y2="40"/>
-    <line x1="460" y1="170" x2="520" y2="40"/>
-    <line x1="400" y1="180" x2="360" y2="40"/>
-  </g>
-
-  <!-- Real-Time Neural Signal Callout -->
-  <rect x="80" y="420" width="180" height="60" rx="6" fill="#140A26" stroke="#A855F7" stroke-width="1"/>
-  <text x="92" y="442" font-family="monospace" font-size="10" fill="#E9D5FF">SYNAPTIC BANDWIDTH</text>
-  <text x="92" y="462" font-family="monospace" font-size="9" fill="#06B6D4">12.8 Gbps // LATENCY 1.8ms</text>
-  <line x1="260" y1="445" x2="330" y2="380" stroke="#A855F7" stroke-width="1"/>
-
-  <rect x="540" y="420" width="180" height="60" rx="6" fill="#140A26" stroke="#06B6D4" stroke-width="1"/>
-  <text x="552" y="442" font-family="monospace" font-size="10" fill="#67E8F9">MOTOR CORTEX INTENT</text>
-  <text x="552" y="462" font-family="monospace" font-size="9" fill="#F43F5E">99.7% ACCURACY DECODE</text>
-  <line x1="540" y1="445" x2="480" y2="390" stroke="#06B6D4" stroke-width="1"/>
-
-  <!-- Technical Headings -->
-  <text x="50" y="60" font-family="monospace" font-size="12" fill="#A855F7" letter-spacing="2">NEURAL INTERFACE &amp; COGNITIVE AUGMENTATION // 2035</text>
-  <text x="50" y="80" font-family="monospace" font-size="10" fill="#94A3B8">BIO-COMPATIBLE SYNAPTIC LACE &amp; REAL-TIME SUB-VOCAL MOTOR DECODING</text>
-  <text x="750" y="570" font-family="monospace" font-size="11" fill="#06B6D4" text-anchor="end">NEUROPLASTIC INTEGRATION: HOMOGENEOUS // ZERO REJECTION</text>
+  <!-- Frame & Metadata -->
+  <text x="60" y="80" fill="#94A3B8" font-family="monospace" font-size="12" letter-spacing="2">MONOGRAPH 10 · FUTURE OF AI IN BRAIN-COMPUTER INTERFACES</text>
+  <text x="60" y="105" fill="#C084FC" font-family="monospace" font-size="10">FIG. 10 — HIGH-DENSITY MAGNETO-OPTICAL AND FUNCTIONAL ULTRASOUND SPEECH DECODING</text>
+  <rect x="20" y="20" width="1160" height="860" fill="none" stroke="#2E1065" stroke-width="1"/>
 </svg>

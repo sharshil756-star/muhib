@@ -1,18 +1,13 @@
 import { ArticleData, PageSeoConfig } from '../types/seoArticle';
-import heroImg from '../assets/images/future_ai_editorial_hero_1792035906902.jpg';
-import healthcareImg from '../assets/images/ai_precision_medicine_lab_1792035908849.jpg';
-import climateImg from '../assets/images/ai_climate_grid_architecture_1792035910282.jpg';
-import roboticsImg from '../assets/images/ai_collaborative_robotics_atelier_1792035912658.jpg';
-import educationImg from '../assets/images/ai_neural_education_symphony_1792035912961.jpg';
 
 export const HERO_EDITORIAL_IMAGE = {
-  src: heroImg,
+  src: '/images/future-ai-neural-hero.svg',
   altText:
-    'Luminous bio-computational research conservatory in 2035 with holographic world models and optical computing columns',
+    'Schematic architectural diagram of the Aethelgard Autonomous AI Core and planetary neural world model in 2035',
   caption:
     'Fig. 00 — The Aethelgard Autonomous AI Core in 2035: Sunlit bio-computational research conservatory projecting planetary neural models and multi-domain simulations.',
-  fileSizeKb: 1180,
-  dimensions: '1920 × 1080 px (16:9)',
+  fileSizeKb: 18.2,
+  dimensions: '1600 × 900 px (16:9 Vector)',
 };
 
 export const HOMEPAGE_SEO_CONFIG: PageSeoConfig = {
@@ -101,13 +96,13 @@ export const ARTICLES_DATA: ArticleData[] = [
     readingTimeMinutes: 9,
     wordCount: 1480,
     image: {
-      src: healthcareImg,
+      src: '/images/articles/ai-healthcare-diagnostics.svg',
       altText:
-        'Next-generation clinical genomics and AI diagnostics laboratory with cellular protein folding holographic projection',
+        'Clinical laboratory schematic of multi-modal AI diagnostics, liquid biopsy DNA methylation, and holographic protein folding',
       caption:
-        'Fig. 01 — Next-generation clinical genomics and AI diagnostics studio: Brushed aluminum optical microscope with holographic cellular protein folding projection and pre-symptomatic biomarker maps.',
-      fileSizeKb: 802,
-      dimensions: '1600 × 1200 px (4:3)',
+        'Fig. 01 — Next-generation clinical genomics and AI diagnostics pipeline: Multi-modal liquid biopsy array and holographic de novo protein folding simulation.',
+      fileSizeKb: 14.8,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'By 2032, a routine blood draw will no longer be compared against a population average; it will be simulated against a patient’s lifelong molecular digital twin.',
@@ -206,13 +201,13 @@ export const ARTICLES_DATA: ArticleData[] = [
     readingTimeMinutes: 8,
     wordCount: 1420,
     image: {
-      src: climateImg,
+      src: '/images/articles/ai-climate-energy-grids.svg',
       altText:
-        'Cinematic architectural photograph of an autonomous renewable energy grid and atmospheric carbon capture facility',
+        'Technical diagram of autonomous continental clean energy grid, predictive wind turbines, and magnetic confinement fusion substation',
       caption:
-        'Fig. 02 — Autonomous renewable energy and atmospheric carbon capture facility in a Nordic fjord: Minimalist concrete and solar glass turbines balancing grid storage at sub-second latency.',
-      fileSizeKb: 857,
-      dimensions: '1600 × 1200 px (4:3)',
+        'Fig. 02 — Autonomous renewable energy routing and tokamak fusion substation: Real-time frequency balancing and predictive wind aerodynamics.',
+      fileSizeKb: 13.9,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'Renewable energy was never limited by solar or wind abundance; it was bottlenecked by our inability to predict atmospheric turbulence and dispatch storage at sub-second latency.',
@@ -311,13 +306,13 @@ export const ARTICLES_DATA: ArticleData[] = [
     readingTimeMinutes: 8,
     wordCount: 1390,
     image: {
-      src: roboticsImg,
+      src: '/images/articles/ai-collaborative-robotics.svg',
       altText:
-        'Editorial documentary photograph of a precision humanoid robotics and artisan fabrication studio with titanium cobot',
+        'Precision aerospace engineering diagram of collaborative humanoid robotics, force-torque tactile strain gauges, and blisk assembly',
       caption:
-        'Fig. 03 — Precision humanoid robotics atelier: Sleek brushed titanium robotic arm collaborating with human artisans on sustainable timber and aerospace fabrication.',
-      fileSizeKb: 896,
-      dimensions: '1600 × 1200 px (4:3)',
+        'Fig. 03 — Precision humanoid cobot atelier: Articulated titanium robotic arm with sub-millimeter tactile guidance collaborating with aerospace artisans.',
+      fileSizeKb: 14.5,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'The highest achievement of embodied robotics is not an empty factory floor, but a workshop where a single craftsperson can orchestrate the physical precision of twenty hands.',
@@ -416,13 +411,13 @@ export const ARTICLES_DATA: ArticleData[] = [
     readingTimeMinutes: 7,
     wordCount: 1290,
     image: {
-      src: educationImg,
+      src: '/images/articles/ai-personalized-education.svg',
       altText:
-        'Editorial documentary photograph of a futuristic university seminar room and acoustic creative studio with transparent spatial displays',
+        'Cognitive science diagram of AI personalized learning, 3D Socratic knowledge graph, and real-time cognitive load telemetry',
       caption:
-        'Fig. 04 — Socratic AI adaptive seminar studio: Tactile analog instruments paired with transparent spatial computing displays on warm oak desks.',
-      fileSizeKb: 910,
-      dimensions: '1600 × 1200 px (4:3)',
+        'Fig. 04 — Socratic AI adaptive seminar studio: Interactive 3D knowledge graph and continuous neural cognitive load modeling.',
+      fileSizeKb: 13.4,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'When an algorithm merely gives a student the finished answer, it steals the cognitive struggle that builds neural pathways; true educational AI asks the exact question that unlocks understanding.',
@@ -505,11 +500,11 @@ export const ARTICLES_DATA: ArticleData[] = [
     image: {
       src: '/images/articles/quantum-ai-materials.svg',
       altText:
-        'Diagram of quantum AI computing lattice topology used for AI material discovery simulations and solid-state battery design',
+        'Technical schematic of 10mK cryogenic quantum computing cryostat and room-temperature superconductor crystalline lattice simulation',
       caption:
-        'Fig. 05 — Topological lattice schematic of a lithium-lanthanum-zirconate solid-state electrolyte synthesized via hybrid quantum-neural optimization.',
-      fileSizeKb: 18.4,
-      dimensions: '800 × 600 px (4:3 SVG)',
+        'Fig. 05 — Topological lattice schematic of a solid-state battery electrolyte and quantum-neural Hamiltonian screening.',
+      fileSizeKb: 15.6,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'Classical computers approximate electron interactions; hybrid quantum AI computing solves the Schrödinger equation natively to invent materials nature never stumbled upon.',
@@ -592,11 +587,11 @@ export const ARTICLES_DATA: ArticleData[] = [
     image: {
       src: '/images/articles/regenerative-ai-agriculture.svg',
       altText:
-        'Schematic of autonomous regenerative farming and precision soil microbiome AI sensor network illustrating AI in agriculture',
+        'Agro-ecological cross-section of subterranean mycorrhizal AI sensor network, vertical aeroponic towers, and autonomous swarm drones',
       caption:
-        'Fig. 06 — Subterranean mycorrhizal carbon flux and canopy transpiration telemetry mapped across a polyculture agroforestry plot.',
-      fileSizeKb: 14.2,
-      dimensions: '800 × 600 px (4:3 SVG)',
+        'Fig. 06 — Subterranean mycorrhizal carbon flux telemetry and autonomous solar scout rovers across a polyculture agroforestry plot.',
+      fileSizeKb: 15.2,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'Twentieth-century agronomy treated soil as an inert sponge for petrochemicals; AI agro-ecology listens to the fungal and bacterial symphony beneath the roots.',
@@ -679,11 +674,11 @@ export const ARTICLES_DATA: ArticleData[] = [
     image: {
       src: '/images/articles/deep-space-ai-probes.svg',
       altText:
-        'Orbital trajectory telemetry diagram illustrating AI in space exploration and autonomous planetary exploration probes',
+        'Astrophysical schematic of autonomous outer-system AI exploration probe, optical laser transceiver, and Europa ice geyser survey',
       caption:
-        'Fig. 07 — Autonomous gravity-assist and subsurface ice-radar decision graph for outer-system ocean world reconnaissance.',
-      fileSizeKb: 12.8,
-      dimensions: '800 × 600 px (4:3 SVG)',
+        'Fig. 07 — Autonomous gravity-assist trajectory and optical laser communications for Europa cryovolcanic ocean world survey.',
+      fileSizeKb: 15.9,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'You cannot joystick a cryobot submarine beneath twenty kilometers of Europa’s ice from a control room in Pasadena; the probe itself must recognize life when it sees it.',
@@ -766,11 +761,11 @@ export const ARTICLES_DATA: ArticleData[] = [
     image: {
       src: '/images/articles/ai-ethics-governance.svg',
       altText:
-        'Cryptographic audit ledger and mechanistic interpretability graph illustrating the future of AI ethics and algorithmic governance',
+        'Cryptographic zero-knowledge verification shield, causal attribution DAG, and mechanistic interpretability neural audit tree',
       caption:
-        'Fig. 08 — Verifiable causal attribution graph auditing fairness invariants across municipal credit and healthcare triage models.',
-      fileSizeKb: 15.1,
-      dimensions: '800 × 600 px (4:3 SVG)',
+        'Fig. 08 — Zero-knowledge proof ledger and verifiable causal attribution graph auditing fairness invariants across autonomous models.',
+      fileSizeKb: 14.7,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'Trust in high-stakes artificial intelligence cannot rest on a vendor’s promise; it must rest on mathematical proofs that anyone can inspect and nobody can forge.',
@@ -853,11 +848,11 @@ export const ARTICLES_DATA: ArticleData[] = [
     image: {
       src: '/images/articles/smart-cities-digital-twins.svg',
       altText:
-        'Diagram of urban digital twin simulation and autonomous public transit AI network illustrating AI in smart cities',
+        'Isometric architectural diagram of municipal digital twin, vertical timber high-rises, and autonomous micro-transit pulse network',
       caption:
         'Fig. 09 — Multi-layer municipal digital twin coordinating micro-transit headways, stormwater retention, and district thermal grids.',
-      fileSizeKb: 16.0,
-      dimensions: '800 × 600 px (4:3 SVG)',
+      fileSizeKb: 15.4,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'The smartest city of 2035 does not look like a neon science-fiction movie; it looks like a quiet, tree-lined neighborhood where transit arrives within ninety seconds of your walk to the corner.',
@@ -940,11 +935,11 @@ export const ARTICLES_DATA: ArticleData[] = [
     image: {
       src: '/images/articles/neural-bci-interfaces.svg',
       altText:
-        'Non-invasive cortical decoding topology illustrating AI brain-computer interfaces and neural speech restoration',
+        'Neurotechnology schematic of high-density cortical decoding mesh, functional ultrasound emitter array, and conversational speech synthesis',
       caption:
         'Fig. 10 — High-density magneto-optical and functional ultrasound phoneme decoding architecture achieving 115 words per minute.',
-      fileSizeKb: 13.9,
-      dimensions: '800 × 600 px (4:3 SVG)',
+      fileSizeKb: 14.9,
+      dimensions: '1200 × 900 px (4:3 Vector)',
     },
     pullQuote: {
       text: 'The most profound frontier of artificial intelligence is giving a person with locked-in syndrome their own natural voice and the ability to feel the warmth of a loved one’s hand again.',

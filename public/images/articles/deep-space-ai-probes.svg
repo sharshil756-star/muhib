@@ -1,23 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" preserveAspectRatio="xMidYMid slice">
   <defs>
-    <radialGradient id="spaceGlow" cx="65%" cy="35%" r="70%">
+    <radialGradient id="deepSpaceVoid" cx="65%" cy="35%" r="75%">
       <stop offset="0%" stop-color="#1E1B4B" stop-opacity="0.8"/>
-      <stop offset="40%" stop-color="#0F172A" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#030712" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#0F172A" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#02040A" stop-opacity="1"/>
     </radialGradient>
-    <radialGradient id="europaGlow" cx="40%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="#BAE6FD"/>
-      <stop offset="60%" stop-color="#0284C7"/>
-      <stop offset="90%" stop-color="#082F49"/>
-      <stop offset="100%" stop-color="#020617"/>
+    <radialGradient id="europaIceGlow" cx="40%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#E0F2FE"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="85%" stop-color="#0369A1"/>
+      <stop offset="100%" stop-color="#02131E"/>
     </radialGradient>
-    <linearGradient id="ionExhaust" x1="0%" y1="50%" x2="100%" y2="50%">
-      <stop offset="0%" stop-color="#67E8F9" stop-opacity="1"/>
-      <stop offset="70%" stop-color="#0284C7" stop-opacity="0.5"/>
+    <radialGradient id="jupiterBands" cx="30%" cy="50%" r="65%">
+      <stop offset="0%" stop-color="#FED7AA"/>
+      <stop offset="35%" stop-color="#EA580C"/>
+      <stop offset="70%" stop-color="#7C2D12"/>
+      <stop offset="100%" stop-color="#1C1917"/>
+    </radialGradient>
+    <linearGradient id="laserBeam" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67E8F9"/>
+      <stop offset="50%" stop-color="#0284C7"/>
       <stop offset="100%" stop-color="#0369A1" stop-opacity="0"/>
     </linearGradient>
     <filter id="spaceBloom" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -25,76 +31,88 @@
     </filter>
   </defs>
 
-  <!-- Deep Cosmic Void -->
-  <rect width="800" height="600" fill="#02040A"/>
-  <rect width="800" height="600" fill="url(#spaceGlow)"/>
+  <!-- Deep Cosmic Void Canvas -->
+  <rect width="1200" height="900" fill="#02040A"/>
+  <rect width="1200" height="900" fill="url(#deepSpaceVoid)"/>
 
   <!-- Star Field -->
-  <g fill="#FFFFFF" opacity="0.8">
-    <circle cx="80" cy="120" r="1"/>
-    <circle cx="150" cy="80" r="1.5"/>
-    <circle cx="240" cy="180" r="1"/>
-    <circle cx="320" cy="90" r="1"/>
-    <circle cx="480" cy="60" r="1.2"/>
-    <circle cx="700" cy="140" r="1"/>
-    <circle cx="750" cy="80" r="1.8"/>
-    <circle cx="100" cy="380" r="1.2"/>
-    <circle cx="210" cy="460" r="1"/>
-    <circle cx="680" cy="480" r="1.5"/>
-    <circle cx="590" cy="530" r="1"/>
+  <g fill="#FFFFFF" opacity="0.85">
+    <circle cx="90" cy="140" r="1.5"/>
+    <circle cx="180" cy="80" r="2"/>
+    <circle cx="280" cy="220" r="1.5"/>
+    <circle cx="410" cy="110" r="1"/>
+    <circle cx="560" cy="70" r="1.8"/>
+    <circle cx="780" cy="130" r="1.5"/>
+    <circle cx="890" cy="60" r="2.2"/>
+    <circle cx="1120" cy="150" r="1.5"/>
+    <circle cx="140" cy="460" r="1.8"/>
+    <circle cx="260" cy="580" r="1.5"/>
+    <circle cx="1060" cy="720" r="2"/>
+    <circle cx="940" cy="820" r="1.5"/>
   </g>
 
-  <!-- Distant Celestial Body (Icy Moon Europa / Gas Giant Rings) -->
-  <circle cx="620" cy="220" r="140" fill="url(#europaGlow)"/>
-  <!-- Planet Rings with Shadows -->
-  <ellipse cx="620" cy="220" rx="280" ry="45" fill="none" stroke="#E2E8F0" stroke-width="6" opacity="0.45" transform="rotate(-20 620 220)"/>
-  <ellipse cx="620" cy="220" rx="260" ry="40" fill="none" stroke="#93C5FD" stroke-width="2" opacity="0.6" transform="rotate(-20 620 220)"/>
-  <ellipse cx="620" cy="220" rx="230" ry="35" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.3" transform="rotate(-20 620 220)"/>
-
-  <!-- Autonomous Deep Space AI Exploration Probe (Center-Left) -->
-  <g transform="translate(280, 310) rotate(15)">
-    <!-- Ion Propulsion Plume -->
-    <polygon points="-120,-8 -120,8 -20,12 -20,-12" fill="url(#ionExhaust)" filter="url(#spaceBloom)"/>
-    <line x1="-120" y1="0" x2="-20" y2="0" stroke="#E0F2FE" stroke-width="2" filter="url(#spaceBloom)"/>
-
-    <!-- Main Bus Chassis (Titanium Carbon Composite) -->
-    <rect x="-20" y="-30" width="80" height="60" rx="6" fill="#1E293B" stroke="#94A3B8" stroke-width="2"/>
-    <rect x="0" y="-22" width="45" height="44" rx="3" fill="#0F172A" stroke="#38BDF8" stroke-width="1"/>
-
-    <!-- High-Gain Parabolic Telemetry Dish -->
-    <path d="M 60 -50 A 60 60 0 0 1 60 50 Z" fill="#334155" stroke="#F1F5F9" stroke-width="2"/>
-    <line x1="60" y1="0" x2="85" y2="0" stroke="#F59E0B" stroke-width="2"/>
-    <circle cx="85" cy="0" r="3" fill="#F59E0B" filter="url(#spaceBloom)"/>
-
-    <!-- Solar / RTG Array Wings -->
-    <rect x="10" y="-120" width="22" height="90" rx="2" fill="#0C4A6E" stroke="#38BDF8" stroke-width="1.5"/>
-    <rect x="10" y="30" width="22" height="90" rx="2" fill="#0C4A6E" stroke="#38BDF8" stroke-width="1.5"/>
-    <!-- Solar Cell Grid lines -->
-    <line x1="10" y1="-90" x2="32" y2="-90" stroke="#7DD3FC" stroke-width="1"/>
-    <line x1="10" y1="-60" x2="32" y2="-60" stroke="#7DD3FC" stroke-width="1"/>
-    <line x1="10" y1="60" x2="32" y2="60" stroke="#7DD3FC" stroke-width="1"/>
-    <line x1="10" y1="90" x2="32" y2="90" stroke="#7DD3FC" stroke-width="1"/>
-
-    <!-- Autonomous Optical Navigation Cameras & Lidar -->
-    <circle cx="45" cy="-18" r="6" fill="#0369A1" stroke="#38BDF8" stroke-width="1.5"/>
-    <circle cx="45" cy="18" r="6" fill="#0369A1" stroke="#38BDF8" stroke-width="1.5"/>
+  <!-- Distant Gas Giant Jupiter (Upper Right Horizon) -->
+  <g transform="translate(950, 260)">
+    <circle cx="0" cy="0" r="180" fill="url(#jupiterBands)"/>
+    <!-- Planetary Rings -->
+    <ellipse cx="0" cy="0" rx="360" ry="55" fill="none" stroke="#FDE047" stroke-width="4" opacity="0.35" transform="rotate(-18)"/>
+    <ellipse cx="0" cy="0" rx="330" ry="50" fill="none" stroke="#BAE6FD" stroke-width="2" opacity="0.5" transform="rotate(-18)"/>
   </g>
 
-  <!-- Autonomous Navigation Vectors & Real-Time Trajectory AI -->
-  <path d="M 120 480 Q 280 320, 520 220" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-dasharray="6 6"/>
-  <circle cx="520" cy="220" r="5" fill="none" stroke="#F59E0B" stroke-width="2"/>
-  
-  <!-- Optical Target Reticle -->
-  <g transform="translate(620, 220)" stroke="#38BDF8" stroke-width="1" opacity="0.8">
-    <circle cx="0" cy="0" r="28" fill="none" stroke-dasharray="4 4"/>
-    <line x1="-35" y1="0" x2="-20" y2="0"/>
-    <line x1="20" y1="0" x2="35" y2="0"/>
-    <line x1="0" y1="-35" x2="0" y2="-20"/>
-    <line x1="0" y1="20" x2="0" y2="35"/>
+  <!-- Icy Moon Europa with Cryovolcanic Plumes (Lower Center) -->
+  <g transform="translate(680, 680)">
+    <circle cx="0" cy="0" r="140" fill="url(#europaIceGlow)"/>
+    <!-- Ice Fractures (Lineae) -->
+    <g stroke="#93C5FD" stroke-width="1.8" fill="none" opacity="0.75">
+      <path d="M -90 -40 Q -30 20, 60 -50 T 120 10"/>
+      <path d="M -70 50 Q 20 80, 80 40"/>
+      <path d="M -110 10 Q -40 -60, 40 -80"/>
+    </g>
+    <!-- Cryovolcanic Geyser Water Plumes -->
+    <g filter="url(#spaceBloom)">
+      <path d="M -40 -135 Q -60 -210, -50 -260 Q -30 -210, -35 -135" fill="#38BDF8" fill-opacity="0.6"/>
+      <circle cx="-50" cy="-260" r="8" fill="#FFFFFF"/>
+    </g>
   </g>
 
-  <!-- Technical Telemetry Typography -->
-  <text x="50" y="60" font-family="monospace" font-size="12" fill="#38BDF8" letter-spacing="2">AUTONOMOUS INTERPLANETARY EXPLORER // ODYSSEY-9</text>
-  <text x="50" y="80" font-family="monospace" font-size="10" fill="#94A3B8">LIGHT-LAG DELAY: 48.6 MIN // ONBOARD EDGE-AI PATHFINDING (ZERO EARTH TELEOP)</text>
-  <text x="750" y="570" font-family="monospace" font-size="11" fill="#F59E0B" text-anchor="end">AUTONOMOUS ORBIT INSERTION: 99.999% TRAJECTORY CONFIDENCE</text>
+  <!-- Autonomous Deep Space AI Exploration Probe (Center Left Flying Outward) -->
+  <g transform="translate(420, 440) rotate(18)">
+    <!-- Ion Propulsion Engine Plume -->
+    <polygon points="-160,-12 -160,12 -30,16 -30,-16" fill="url(#laserBeam)" filter="url(#spaceBloom)"/>
+    <line x1="-160" y1="0" x2="-30" y2="0" stroke="#F8FAFC" stroke-width="3" filter="url(#spaceBloom)"/>
+
+    <!-- Main Probe Bus Chassis (Gold Foil Thermal Shield & Carbon Titanium Core) -->
+    <rect x="-30" y="-35" width="80" height="70" rx="8" fill="#1E293B" stroke="#F59E0B" stroke-width="2.5"/>
+    <!-- Gold Multilayer Insulation Panel -->
+    <rect x="-24" y="-28" width="68" height="56" rx="4" fill="#D97706" stroke="#FDE047" stroke-width="1.5"/>
+
+    <!-- High-Gain Optical Laser Communication Transceiver Dish -->
+    <path d="M 50 -60 Q 90 0, 50 60" fill="none" stroke="#E2E8F0" stroke-width="5"/>
+    <line x1="50" y1="0" x2="85" y2="0" stroke="#94A3B8" stroke-width="3"/>
+    <circle cx="85" cy="0" r="6" fill="#38BDF8" filter="url(#spaceBloom)"/>
+
+    <!-- High-Speed Optical Laser Comms Link toward Earth -->
+    <line x1="85" y1="0" x2="680" y2="-320" stroke="#06B6D4" stroke-width="2" stroke-dasharray="14 8" filter="url(#spaceBloom)"/>
+
+    <!-- Magnetometer Boom & Autonomous Sensor Suite -->
+    <line x1="10" y1="-35" x2="20" y2="-120" stroke="#94A3B8" stroke-width="2.5"/>
+    <circle cx="20" cy="-120" r="5" fill="#EF4444"/>
+    <line x1="10" y1="35" x2="30" y2="130" stroke="#94A3B8" stroke-width="2.5"/>
+    <circle cx="30" cy="130" r="6" fill="#FDE047"/>
+  </g>
+
+  <!-- Real-Time Outer System Navigation Telemetry HUD -->
+  <g transform="translate(100, 160)">
+    <rect width="290" height="150" rx="6" fill="#0B132B" fill-opacity="0.85" stroke="#38BDF8" stroke-width="1.5"/>
+    <text x="16" y="24" fill="#38BDF8" font-family="monospace" font-size="10" letter-spacing="1">AUTONOMOUS ORBITAL TRAJECTORY</text>
+    <text x="16" y="52" fill="#FDE047" font-family="monospace" font-size="13" font-weight="bold">DELTA-V ACCURACY: 99.98%</text>
+    <text x="16" y="76" fill="#94A3B8" font-family="monospace" font-size="9">TARGET: EUROPA OCEAN VENT SURVEY</text>
+    <text x="16" y="98" fill="#34D399" font-family="monospace" font-size="9">OPTICAL LASER LINK: 1.2 Gbps (42 AU)</text>
+    <text x="16" y="122" fill="#38BDF8" font-family="monospace" font-size="9">ICE PENETRATING RADAR: ACTIVE</text>
+  </g>
+
+  <!-- Frame & Metadata -->
+  <text x="60" y="80" fill="#94A3B8" font-family="monospace" font-size="12" letter-spacing="2">MONOGRAPH 07 · FUTURE OF AI IN DEEP SPACE EXPLORATION</text>
+  <text x="60" y="105" fill="#38BDF8" font-family="monospace" font-size="10">FIG. 07 — AUTONOMOUS GRAVITY-ASSIST AND OPTICAL COMMS TO OUTER ICE MOONS</text>
+  <rect x="20" y="20" width="1160" height="860" fill="none" stroke="#1E293B" stroke-width="1"/>
 </svg>
